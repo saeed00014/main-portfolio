@@ -10,9 +10,10 @@ import { persian } from '../../data'
 
 const ResumePage = () => {
   const ui = useSelector((state) => state.ui)
+  const styles = ui.font
 
   return (
-    <section className='Resumesection'>
+    <section style={{fontFamily: styles}} className='Resumesection'>
       {(ui.language == 'persian' ?
         persian[2] : english[2])
         .map((li) => {

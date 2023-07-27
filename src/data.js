@@ -1,3 +1,9 @@
+import imgLink1 from './images/laptop.png'
+import imgLink2 from './images/phone.png'
+import imgLink3 from './images/bodySign.png'
+import imgLink4 from './images/bodyForm.png'
+import imgLink5 from './images/bodyCard.png'
+
 export const persian = [
   [
     {
@@ -18,8 +24,8 @@ export const persian = [
   ],
   [
     {
-      nameLeft: 'سلام سعید هستم',
-      nameRight: 'برنامه نویس وب',
+      nameRight: '. سلام، سعید هستم',
+      nameLeft: 'برنامه نویس وب',
       disTop: 
       'من یک برنامه نویس وب هستم وب تمرکز اصلی ام بر فرانت اند هست',
       disBottom: 
@@ -72,9 +78,11 @@ export const persian = [
   ],
   [
     {
-      imgLink1: '',
-      imgLink2: '',
-      imgLink3: '',
+      Link1: imgLink1,
+      Link2: imgLink2,
+      Link3: imgLink3,
+      Link4: imgLink4,
+      Link5: imgLink5,
       title: 'BodyMake',
       dis: '',
       skills: [
@@ -94,8 +102,23 @@ export const persian = [
         }
       ],
       button: 'مشاهده توضیحات',
+      titlePerview: 'BodyMake.توضیحات',
       details: [
-
+        {
+          link: imgLink3,
+          name: 'ثبت نام و ورود',
+          dis: 'ثقاغع'
+        },
+        {
+          link: imgLink5,
+          name: 'فروشگاه و سبد خرید',
+          dis: ''
+        },
+        {
+          link: imgLink4,
+          name: 'بخش نظرات و بازخوردها',
+          dis: ''
+        }
       ]
     }
   ]
@@ -171,9 +194,11 @@ export const english = [
   ],
   [
     {
-      imgLink1: '',
-      imgLink2: '',
-      imgLink3: '',
+      Link1: imgLink1,
+      Link2: imgLink2,
+      Link3: imgLink3,
+      Link4: imgLink4,
+      Link5: imgLink5,
       title: 'BodyMake',
       dis: 
       'this is my first project i made this site 1mounth ago its fully responsive and has some nice animations and has alot of features like shop card signin/signout acount info and much more.. take a look at the site!',
@@ -194,8 +219,23 @@ export const english = [
         }
       ],
       button: 'Perview',
+      titlePerview: 'BodyMake.perview',
       details: [
-        
+        {
+          link: imgLink3,
+          name: 'Sign up and Sign in',
+          dis: 'jfads jasdlkj; '
+        },
+        {
+          link: imgLink5,
+          name: 'shop and shopping card',
+          dis: ''
+        },
+        {
+          link: imgLink4,
+          name: 'submit openion',
+          dis: ''
+        }
       ]
     }
   ]

@@ -1,13 +1,19 @@
 import './footer.css'
 
+import React from 'react'
+import { useSelector } from 'react-redux'
+
 import { AiOutlineMail } from 'react-icons/ai'
 import { AiFillGithub } from 'react-icons/ai'
 import { AiFillLinkedin } from 'react-icons/ai'
 import { AiFillInstagram } from 'react-icons/ai'
 
 const Footer = () => {
+  const ui = useSelector((state) => state.ui)
+  const styles = ui.font
+
   return (
-    <section className='Footersection'>
+    <section style={{fontFamily: styles}}  className='Footersection'>
       <div className='Footercontainer'>
         <div className='FooterfooterTop'>
           <div className='Footertext'>
