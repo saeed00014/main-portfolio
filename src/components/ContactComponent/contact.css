@@ -1,0 +1,54 @@
+.FormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 49rem;
+  padding-top: 8rem;
+}
+
+.FormContainer form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 25rem;
+  gap: 1rem;
+  background-color: var(--global-color-lighter);
+  padding: ;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 1rem;
+}
+
+.FormContainer form h1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.FormContainer form input,
+.FormContainer form textarea {
+  height: 2rem;
+  width: 85%;
+  background-color: #537d8f;
+  border: none;
+}
+
+.FormContainer form label{
+  display: flex;
+  width: 85%;
+}
+
+.FormContainer form textarea {
+  height: 6rem;
+}
+
+.FormContainer form input:nth-child(8) {
+  width: 10rem;
+  height: 2.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}

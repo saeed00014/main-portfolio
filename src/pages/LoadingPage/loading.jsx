@@ -1,14 +1,16 @@
+import './loading.css'
+
 import React from "react"
 
 const LoadingPage = () => {
   return (
-    <section>
-      <div>
+    <section className='loadingsection'>
+      <div className='loadingcontainer'>
         <p>
           Saeed
           <span></span>
         </p>
-        <div></div>
+        <div className='loadingline'></div>
       </div>
     </section>
   )

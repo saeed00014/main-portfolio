@@ -1,0 +1,333 @@
+.HomeHeadersection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.HomeHeadercontainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  max-width: 80rem;
+  height: 100vh;
+  padding-top: 4.5rem;
+}
+
+.HomeHeadercontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.HomeHeadertextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: .3rem;
+}
+
+.HomeHeaderh1C {
+  height: max-content;
+  margin-bottom: .5rem;
+  max-height: 5rem;
+  transition: all .3s ease;
+  overflow: hidden;
+}
+
+.HomeHeaderpC {
+  height: 26px;
+  transition: all .3s ease;
+  overflow: hidden;
+}
+
+@keyframes headerH1c {
+ from {
+    margin-top: 4.5rem;
+  }
+
+ to {
+    margin-top: 0;
+  }
+}
+
+.HomeHeadertitle {
+  display: flex;
+}
+
+.HomeHeadercontent h1 {
+  display: flex;
+  font-size: 4rem;
+  font-weight: 100;
+  margin: 0;
+  margin-top: 4.5rem;
+  animation: .8s ease-in-out headerH1c forwards;
+}
+
+.HomeHeadercontent p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  animation: .8s ease-in-out headerH1c forwards;
+}
+
+.HomeHeadercontactLink {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  width: 12rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  color: var(--global-color-primary);
+  border: .1rem solid var(--global-color-primary);
+  text-decoration: none;
+  transition: all .4s ease;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.HomeHeadercontactLink:hover {
+  color: white;
+  transition: all .8s ease;
+}
+
+.HomeHeadercontactLink span:nth-child(1) {
+  position: absolute;
+  width: 12rem;
+  height: 3rem;
+  left: -13.5rem;
+  background-color: var(--global-color-primary);
+  transition: all .4s ease;
+  z-index: -1;
+}
+
+.HomeHeadercontactLink span:nth-child(2) {
+  position: absolute;
+  width: 2rem;
+  height: 3.4rem;
+  left: -2.5rem;
+  bottom: -.8rem;
+  transform: rotate(-30deg);
+  background-color: var(--global-color-primary);
+  transition: all .4s ease;
+  z-index: -1;
+}
+
+.HomeHeadercontactLink:hover span:nth-child(1) {
+  left: 0rem;
+  transition: all .8s ease;
+}
+
+.HomeHeadercontactLink:hover span:nth-child(2) {
+  left: 11rem;
+  transition: all .8s ease;
+}
+
+.HomeHeadersocialLink {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
+  right: 0rem;
+  top: 10rem;
+  gap: .3rem;
+}
+
+.HomeHeadersocialLink a {
+  color: white;
+}
+
+.HomeHeadersocialLink li a * {
+  width: 2rem;
+  height: 2rem;
+}
+
+.HomeHeaderspin {
+  position: absolute;
+  width: 1.8rem;
+  height: 3.5rem;
+  bottom: 5rem;
+  cursor: pointer;
+}
+
+.HomeHeaderspin span:nth-child(1) {
+  position: absolute;
+  width: 1.8rem;
+  height: 3.5rem;
+  bottom: .1rem;
+  border: 2px solid var(--global-color-primary);;
+  border-radius: 1rem;
+}
+
+.HomeHeaderspin span:nth-child(2) {
+  position: absolute;
+  width: .2rem;
+  height: .8rem;
+  top: .3rem;
+  left: .83rem;
+  background-color: white;
+  border-radius: 1rem;
+  transition: all .5s ease;
+}
+
+@keyframes scroller {
+  from {
+    top: .3rem;
+  }
+  
+  to {
+    top: 2rem;
+  }
+}
+
+@keyframes mouce {
+  from {
+    bottom: 1.8rem;
+  }
+  
+  to {
+    bottom: 0;
+  }
+}
+
+.HomeHeaderspin span:nth-child() {
+  animation: 1s infinite alternate mouce;
+  animation-delay: 2s;
+  transition: all .5s ease;
+}
+
+.HomeHeaderspin span:nth-child(2) {
+  animation: 1s infinite alternate scroller;
+  animation-delay: 1.5s;
+  transition: all .5s ease;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 640px) {
+  .HomeHeadertitle h1 {
+    font-size:  clamp(2.9rem, 5.1vw, 3.2rem);
+  }
+
+  .HomeHeadertextContainer p {
+    font-size: 1.2rem;
+  }
+
+  .HomeHeadersocialLink {
+    top: 6rem;
+    bottom: 65vh;
+  }
+} 
+
+@media only screen and (max-width: 640px) and (min-width: 480px) { 
+  .HomeHeadercontainer {
+    width: 90%;
+  }
+
+  .HomeHeaderh1C {
+    width: 100%;
+    height: max-content;
+    max-height: 3.5rem;
+  }
+
+  .HomeHeadertextContainer h1 {
+    font-size: clamp(1rem, 7.5vw, 2.9rem);
+  }
+
+  .HomeHeadertextContainer p {
+    font-size: clamp(1rem, 3.2vw, 1.25rem);
+  }
+
+  .HomeHeadersocialLink {
+    top: 6rem;
+    bottom: 65vh;
+  }
+
+  .HomeHeadercontactLink {
+    margin-top: 3%;
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 0) { 
+  .HomeHeadercontainer {
+    width: 95%;
+  }
+
+  .HomeHeadercontent {
+    width:100%;
+  }
+
+  .HomeHeadertextContainer {
+    width: 95%;
+  }
+
+  .HomeHeaderh1C {
+    width: 100%;
+    height: max-content;
+    max-height: 6rem;
+  }
+  
+  .HomeHeadertitle {
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .HomeHeadertitle span:nth-child(3) {
+    position: absolute;
+    width: 100%;
+    height: .01rem;
+    bottom: 25%;
+    left: 0;
+    width: 35%;
+    background-color: var(--global-color-primary);
+  }
+
+  .HomeHeadertitle span:nth-child(4) {
+    position: absolute;
+    width: 100%;
+    height: .01rem;
+    top: 25%;
+    right: 0;
+    width: 35%;
+    background-color: var(--global-color-primary);
+  }
+
+  .HomeHeadertitle h1:nth-child(1) {
+    font-size: clamp(1rem, 8.8vw, 2.6rem);
+  }
+  
+  .HomeHeadertitle h1:nth-child(2) {
+    justify-content: flex-end;
+    width: 100%;
+    font-size: clamp(1rem, 8.8vw, 2.6rem);
+  }
+
+  .HomeHeaderpC {
+    width: 100%;
+  }
+
+  .HomeHeaderpC p {
+    font-size: clamp(0rem, 3.6vw, 1.1rem);
+  }
+
+  .HomeHeadercontactLink {
+    margin-top: 3%;
+    width: 10rem;
+    height: 2.7rem;
+  }
+
+  .HomeHeadersocialLink {
+    top: 6rem;
+    bottom: 70vh;
+  }
+
+}

@@ -1,8 +1,46 @@
+import './about.css'
+
 import React from 'react'
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+
+import { persian } from '../../data'
+import { english } from '../../data'
 
 const AboutComponent = () => {
+  const ui = useSelector((state) => state.ui)
   return (
-    <div>AboutComponent</div>
+    <div id='about' className='AboutContainer'>
+      {(ui.language == 'persian' ?
+      persian[4] : english[4])
+      .map((li) => {
+        return (
+          <div className='Aboutcontent'>
+            <div className='AboutaboutLeft'>
+              <h1>{li.title}</h1>
+              <p>{li.dis}</p>
+              <p>{li.dis1}</p>
+              <Link href='/projects'>
+                <span></span>
+                <span></span>
+                {li.button}
+              </Link>
+            </div>
+            <div className='AboutaboutRight'>
+              <h1>{li.titleSkill}</h1>
+              <div className='Aboutskills'>
+                {li.skills.map((skill) => {
+                  return (
+                    <div key={skill}>
+                      <span className='Aboutskill'>{skill}</span>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+      )})}
+    </div>
   )
 }
 

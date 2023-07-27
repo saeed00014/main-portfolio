@@ -1,0 +1,12 @@
+.resumeImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  width: 75%;
+  max-width: 30rem;
+}
+
+.resumeImg img {
+  width: 100%;
+}

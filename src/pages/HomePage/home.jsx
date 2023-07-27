@@ -1,11 +1,18 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
+import HomeHeaderComponent from '../../components/homeComponent/homeHeader'
+import ContactComponent from '../../components/contactComponent/contact'
+import AboutComponent from '../../components/AboutComponent/about'
+import ProjectComponent from '../../components/ProjectComponent/project'
 
 const HomePage = () => {
   return (
-    <div>HomePage
-      <Link to="/project">project</Link>
-    </div>
+    <>
+      <HomeHeaderComponent />
+      <AboutComponent />
+      <ProjectComponent />
+      <ContactComponent />
+    </>
   )
 }
 

@@ -1,0 +1,102 @@
+.loadingsection {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--global-color-secondary);
+  z-index: 100;
+}
+
+.loadingcontainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.9rem;
+  height: 2.5rem;
+}
+
+.loadingsection p {
+  font-family: DancingScript;
+  position: relative;
+  font-size: 1.7rem;
+  width: 0;
+  height: 0;
+  left: -2rem;
+  color: var(--global-color-secondary);
+  transition: all 1s ease;
+  animation: .9s alternate shadow forwards;
+}
+
+.loadingsection p span {
+  position: absolute;
+  top: 10rem;
+  width: 4rem;
+  height: 1.5rem;
+  box-shadow: -2px -9.7rem 60px var(--global-color-secondary);
+  animation: .9s alternate shadow forwards;
+}
+
+@keyframes shadow {
+  10% {
+    color: var(--global-color-secondary);
+    box-shadow: -2px -9.7rem 60px var(--global-color-secondary);
+  }
+
+  100% {
+    color: var(--global-color-ReallyLight);
+    box-shadow: -2px -9.7rem 80px var(--global-color-primary);
+  }
+}
+
+.loadingline {
+  position: absolute;
+  left: -8rem;
+  width: 0rem;
+  bottom: -2rem;
+  height: .2rem;
+  background-color: var(--global-color-primary);
+  animation: 1s alternate loadingLine forwards;
+  border-radius: 3rem;
+}
+@keyframes loadingLine {
+ from {
+    width: 0rem;
+  }
+
+ 100%{
+    width: 21.1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 0) {
+ .loadingcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+  }
+
+ .loadingsection p {
+    left: -2rem;
+  }
+
+ .loadingline {
+    left: -1.5rem;
+
+  }
+
+ @keyframes loadingLine {
+   from {
+      width: 0rem;
+    }
+  
+   100%{
+      width: 13.1rem;
+    }
+  }
+}

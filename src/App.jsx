@@ -9,6 +9,8 @@ import ProjectPage from './pages/ProjectPage/project'
 import ContactPage from './pages/ContactPage/contact'
 import ResumePage from './pages/ResumePage/resume'
 import NotFoundPage from './pages/NotFoundPage/notfound'
+import Header from './components/Header/header'
+import Footer from './components/Footer/footer'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -24,6 +26,8 @@ function App() {
       <BrowserRouter>
         {isLoading ? <LoadingPage />
           : (
+          <>
+            <Header />
             <Routes>
               <Route path='/' element={<HomePage />} />
               <Route path='/project' element={<ProjectPage />} />
@@ -31,6 +35,8 @@ function App() {
               <Route path='/resume' element={<ResumePage />} />
               <Route path='/*' element={<NotFoundPage />} />
             </Routes>
+            <Footer />
+          </>
           )
         }
       </BrowserRouter>

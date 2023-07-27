@@ -1,8 +1,13 @@
+import './contact.css'
+
 import React from 'react'
+import ContactComponent from '../../components/contactComponent/contact'
 
 const ContactPage = () => {
   return (
-    <div>ContactPage</div>
+    <section className='Contactsection'>
+      <ContactComponent />
+    </section>
   )
 }
 

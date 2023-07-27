@@ -1,0 +1,29 @@
+.Resumesection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding-top: 8rem;
+}
+
+.Resumehead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.Resumehead h1 {
+  font-size: 2.5rem;
+  width: 70%;
+}
+
+.Resumehead p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

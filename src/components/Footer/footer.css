@@ -1,0 +1,166 @@
+.Footersection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding-top: 1rem;
+}
+
+.Footercontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  max-width: 70rem;
+}
+
+.FooterfooterTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+
+.Footertext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 1rem;
+}
+
+.Footertext h3 {
+  margin: 0;
+  font-size: 2rem;
+  font-family: DancingScript;
+  font-weight: 100;
+}
+
+.Footertext h5 {
+  width: max-content;
+  opacity: .6;
+  margin: 0;
+  margin-left: -1rem;
+  font-family: DancingScript;
+  font-weight: 100;
+}
+
+.FootertextIn {
+  display: flex;
+  margin: 0;
+}
+
+.FootertextIn h2 {
+  margin: 0;
+}
+
+.Footeremail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.FootersocialLink {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+
+.FootersocialLink li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 45px;
+}
+
+.FootersocialLink li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  border-radius: 2rem;
+}
+
+.FootersocialLink li a * {
+  color: white;
+  text-decoration: none;
+  border-radius: 2rem;
+  width: 70%;
+  height: 70%;
+}
+
+.FootersocialLink li:hover * {
+  background-color: white;
+  color: var(--global-color-secondary);
+  transition: all .3s ease-out;
+}
+
+.FooterfooterBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 100%;
+  border-top: 1px solid #6ec1e479;
+}
+
+
+@media only screen and (max-width: 1024px) and (min-width: 640px) {
+  .Footercontainer {
+    width: 85%;
+  }
+} 
+
+@media only screen and (max-width: 640px) and (min-width: 480px) { 
+  .Footercontainer {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 0) {
+  .Footercontainer {
+    width: 95%;
+    max-width: initial;
+  }
+
+  .FooterfooterTop {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .Footertext {
+    width: 120px;
+  }
+
+  .Footertext h5 {
+    margin-right: 5rem;
+  }
+
+  .FootersocialLink {
+    flex-wrap: wrap;
+    width: 50%;
+    gap: 1rem;
+    min-width: 110px;
+  }
+
+  .FooterfooterTop div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}

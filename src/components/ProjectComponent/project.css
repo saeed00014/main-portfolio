@@ -1,0 +1,447 @@
+.Projectsection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+}
+
+.Projectcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  max-width: 80rem;
+  height: 100%;
+  gap: 7rem;
+}
+
+.Projecttitle {
+  margin-bottom: 1rem;
+  width: 85%;
+  max-width: 80rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ProjecttitleDis {
+  width: 85%;
+  max-width: 80rem;
+  margin: 0;
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+.Projectline {
+  position: absolute;
+  height: .15rem;
+  bottom: -.5rem;
+  left: 3.5rem;
+  right: 3.5rem;
+  background-color: var(--global-color-primary);
+}
+
+.Projectcontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.ProjectprojectItself {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Projectpic {
+  position: relative;
+  display: flex;
+  width: 43%;
+  height: 100%;
+}
+
+.Projectlaptop {
+  width: 100%;
+  object-fit: contain;
+  height: max-content;
+  border: 2px solid var(--global-color-primary);
+}
+
+.Projectphone {
+  display: flex;
+  position: absolute;
+  object-fit: contain;
+  height: max-content;
+  width: 9vw;
+  max-width: 9rem;
+  min-width: 7rem;
+  right: -4rem;
+  top: 2rem;
+  z-index: 4;
+  border: 2px solid var(--global-color-primary);
+}
+
+.Projectdetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 43%;
+  height: 100%;
+  gap: 2.2rem;
+}
+
+.ProjectprojectName {
+  margin: 0;
+  margin-bottom: -1rem;
+  font-size: 1.5rem;
+}
+
+.Projectdis {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.Projectskills {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  min-width: 370px;
+}
+
+.Projectskill {
+  font-size: 1.1rem;
+  border-radius: 1rem;
+  padding: .5rem;
+  background-color: var(--global-color-lighter);
+}
+
+.ProjectprojectLink {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.ProjectvisitSite {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.ProjectvisitSite span:nth-child(1) {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  width: 30%;
+  height: .1rem;
+  background-color: white;
+  transition: all .5s ease;
+}
+
+.ProjectvisitSite:hover span:nth-child(1) {
+  width: 100%;
+  transition: all .5s ease;
+}
+
+.ProjectprojectPerview {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.ProjectprojectPerview h1 {
+  font-size: 2rem;
+}
+
+.ProjectperviewTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -10rem;
+}
+
+.ProjectpartOne {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 15rem;
+  gap: 3vw;
+}
+
+.ProjectpartOne2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 15rem;
+  gap: 3vw;
+}
+
+.partOne img,
+.ProjectpartOne2 img {
+  object-fit: contain;
+  width: 100%;
+  height: max-content;
+  min-width: 25rem;
+  border: .2rem solid var(--global-color-primary);
+  scale: 1;
+}
+
+.ProjectpartOneDetails {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  gap: .5rem;
+}
+
+.ProjectpartOneDetails p {
+  font-size: clamp(.8rem, .8vw, 1rem);
+}
+
+.ProjectpartOne img:hover {
+  transform: rotate3d(3, -1, 0, 30deg);
+  transition: all .7s ease;
+  animation: 1s alternate projectOne forwards .4s,
+   1s alternate projectOne1 forwards .6s,
+   .8s alternate projectOne2 forwards .8s;
+}
+
+.ProjectpartOne2 img:hover {
+  transform: rotate3d(3, -1, 0, 30deg);
+  transition: all .7s ease;
+  animation: 1s alternate projectOne forwards .4s,
+   1s alternate projectOne1 forwards .6s,
+   .8s alternate projectOne2 forwards .8s;
+}
+
+@keyframes projectOne {
+  form {
+    scale: 1;
+  }
+
+  to {
+    scale: 1.1;
+  }
+}
+
+@keyframes projectOne1 {
+  form {
+    transform: rotate3d(3, -1, 0, 30deg);
+  }
+
+  to {
+    transform: rotate3d(3, 1, 0, 30deg);
+  }
+}
+
+@keyframes projectOne2 {
+  form {
+    transform: rotate3d(3, -1, 0, 30deg);
+  }
+
+  to {
+    transform: rotate3d(0, 0, 0, 30deg);
+  }
+}
+
+
+@media only screen and (max-width: 1024px) and (min-width: 640px) {
+  .ProjectprojectItself {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .Projectpic {
+    width: 100%;
+  }
+
+  .Projectphone {
+    width: 15vw;
+    max-width: 20rem;
+    min-width: 9rem;
+    right: -2rem;
+    top: 25%;
+    z-index: 4;
+    border: 2px solid var(--global-color-primary);
+  }
+
+  .Projectdetails {
+    width: 100%;
+  }
+
+
+  .ProjectpartOne {
+    flex-direction: column;
+  }
+
+  .ProjectpartOne2 {
+    flex-direction: column-reverse;
+  }
+
+  .ProjectpartOne img {
+    width: 100%;
+  }
+
+  .ProjectpartOne2 img {
+    width: 100%;
+  }
+
+  .partOne,
+  .ProjectpartOne2 {
+    margin-top: 5rem;
+    gap: 2rem;
+  }
+
+  .ProjectpartOneDetails {
+    width: 100%;
+  }
+
+  .ProjectpartOneDetails p{
+    font-size: clamp(1.2rem, 2.3vw, 1.5rem);
+  }
+} 
+
+@media only screen and (max-width: 640px) and (min-width: 480px) {
+  .Projectcontainer {
+    width: 90%;
+  }
+
+  .ProjectprojectItself {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .Projectpic {
+    width: 100%;
+  }
+
+  .Projectphone {
+    display: none;
+  }
+
+  .Projectdetails {
+    width: 100%;
+  }
+
+  .ProjectpartOne {
+    flex-direction: column;
+  }
+
+  .ProjectpartOne2 {
+    flex-direction: column-reverse;
+  }
+
+  .ProjectpartOne img {
+    width: 100%;
+  }
+
+  .ProjectpartOne2 img {
+    width: 100%;
+  }
+
+  .partOne,
+  .ProjectpartOne2 {
+    margin-top: 5rem;
+    gap: 2rem;
+  }
+
+  .ProjectpartOneDetails {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 0) { 
+  .Projectsection {
+    padding-top: 6rem;
+  }
+
+  .Projectcontainer {
+    width: 95%;
+  }
+
+  .ProjectprojectItself {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .Projecttitle {
+    width: 95%;
+    font-size: 2.5rem;
+  }
+
+  .ProjecttitleDis {
+    width: 95%;
+    font-size: clamp( 1rem, 6.7vw, 2rem) 
+  }
+
+  .Projectskills {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: initial;
+    height: min-content;
+    width: 100%;
+    gap: .3rem 0;
+  }
+
+  .Projectskill {
+    display: block;
+    padding: .3rem;
+  }
+
+  .Projectpic {
+    width: 100%;
+  }
+
+  .Projectphone {
+    display: none;
+    right: 2%;
+  }
+
+  .Projectdetails {
+    width: 100%;
+  }
+
+  .ProjectprojectPerview {
+    width: 100%;
+  }
+
+  .ProjectpartOne {
+    flex-direction: column;
+  }
+
+  .ProjectpartOne2 {
+    flex-direction: column-reverse;
+  }
+  
+  .partOne,
+  .ProjectpartOne2 {
+    margin-top: 5rem;
+    gap: 1.5rem;
+    width: 100%;
+    min-width: initial;
+  }
+  
+  .partOne img,
+  .ProjectpartOne2 img {
+    width: 100%;
+    min-width: initial;      
+  }
+
+  .partOne p,
+  .ProjectpartOne2 p {
+    font-size: 1rem;
+  }
+
+  .ProjectpartOneDetails {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: .5rem;
+  }
+}

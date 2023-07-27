@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-
+  language: 'persian'
 }
 
 const UiSlice = createSlice({
@@ -9,7 +9,7 @@ const UiSlice = createSlice({
   initialState,
   reducers: {
     languageState(state, action) {
-
+      state.language = action.payload
     }
   }
 })

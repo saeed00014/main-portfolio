@@ -1,15 +1,35 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --global-color-primary: #6ec1e4;
+  --global-color-secondary: #121f30;
+  --global-color-lighter: #1e3553;
+  --global-color-hover: #73d622;
+  --global-color-ReallyLight: rgb(104, 206, 206);
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: rgb(255, 255, 255);
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+html,
+body {
+  background-color: var(--global-color-secondary);
+}
+
+@font-face {
+  font-family: 'iranyekan';
+  src: url('./fonts/iranyekan.woff');
+}
+@font-face {
+  font-family: 'DancingScript';
+  src: url('./fonts/DancingScript.ttf');
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto.ttf');
 }
