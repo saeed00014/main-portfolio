@@ -3,8 +3,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 4.5rem;
-  height: 100vh;
+  height: max-content;
   width: 100vw;
 }
 
@@ -38,6 +37,10 @@
   max-width: 70rem;
 }
 
+.AboutContainer[language='persian'] .Aboutcontent {
+  flex-direction: row-reverse;
+}
+
 .AboutaboutLeft {
   display: flex;
   flex-direction: column;
@@ -46,6 +49,12 @@
   width: 43%;
   max-width: 30rem;
   gap: .8rem;
+}
+
+.AboutContainer[language='persian'] .AboutaboutLeft {
+  display: flex;
+  align-items: flex-end;
+  text-align: end;
 }
 
 .AboutaboutLeft h1 {
@@ -122,6 +131,12 @@
   max-width: 31rem;
 }
 
+.AboutContainer[language='persian'] .AboutaboutRight {
+  display: flex;
+  align-items: flex-end;
+  text-align: end;
+}
+
 .AboutaboutRight h1 {
   padding-left: -1rem;
   font-size: 2.5rem;
@@ -139,6 +154,12 @@
   border-top: 2px solid var(--global-color-lighter);
   border-bottom: 2px solid var(--global-color-lighter);
   border-left: 2px solid var(--global-color-lighter);
+}
+
+.AboutContainer[language='persian'] .Aboutskills {
+  flex-direction: row-reverse;
+  padding-left: initial;
+  padding-right: 1rem;
 }
 
 .Aboutskill {
@@ -164,6 +185,10 @@
     gap: 3.5rem;
   }
 
+  .AboutContainer[language='persian'] .Aboutcontent {
+    flex-direction: column;
+  }
+
   .AboutaboutLeft {
     width: 100%;
     max-width: initial;
@@ -181,7 +206,7 @@
 
 @media only screen and (max-width: 640px) and (min-width: 480px) { 
   .Aboutcontainer {
-    height: 100%;
+    height: max-content;
   }
   
   .Aboutcontent {
@@ -189,12 +214,25 @@
     justify-content: center;
     align-items: flex-start;
     width: 85%;
-    gap: 3.5rem;
+    gap: 4rem;
+  }
+
+  .AboutContainer[language='persian'] .Aboutcontent {
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .AboutaboutLeft {
     width: 100%;
     max-width: initial;
+  }
+
+  .AboutaboutLeft h1 {
+    font-size: 1.8rem;
+  }
+
+  .AboutaboutLeft a {
+    margin-top: 1rem;
   }
   
   .AboutaboutRight {
@@ -202,8 +240,18 @@
     max-width: initial;
   }
 
+    
+  .AboutaboutRight h1 {
+    font-size: 1.8rem;
+  }
+
+
   .AboutaboutRight h1 {
     padding-left: 0;
+  }
+
+  .Aboutskill {
+    font-size: 1.2rem;
   }
 }
 
@@ -217,7 +265,12 @@
     justify-content: center;
     align-items: center;
     width: 95%;
-    gap: 3.5rem;
+    gap: 4rem;
+  }
+  
+  .AboutContainer[language='persian'] .Aboutcontent {
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .Abouttitle {
@@ -237,13 +290,17 @@
   .AboutaboutLeft {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     max-width: initial;
   }
 
   .AboutaboutLeft p {
     padding: 0 0rem;
+  }
+
+  .AboutaboutLeft h1 {
+    font-size: 2rem;
   }
 
   .AboutaboutLeft a {
@@ -253,13 +310,13 @@
   .AboutaboutRight {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     max-width: initial;
   }
-
+  
   .AboutaboutRight h1 {
-    padding-left: 0;
+    font-size: 2rem;
   }
 
   .AboutlearningMore {
@@ -268,5 +325,6 @@
 
   .Aboutskill {
     padding: .5rem .5rem;
+    font-size: 1rem;
   }
 }

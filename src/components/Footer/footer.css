@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  padding-top: 1rem;
+  padding-top: 4rem;
 }
 
 .Footercontainer {
@@ -162,5 +162,9 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+  }
+
+  .FooterfooterBottom {
+    font-size: .9rem;
   }
 }

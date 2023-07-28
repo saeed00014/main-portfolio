@@ -9,17 +9,17 @@ export const persian = [
     {
       link: "/contact",
       names: 'ارتباط',
-      name: '03.ارتباط'
+      name: 'ارتباط'
     },
     {
       link: "/resume",
       names: 'رزومه',
-      name: '02.رزومه'
+      name: 'رزومه'
     },
     {
       link: '/project',
       names: 'پروژه ها',
-      name: '01.پروژه ها'
+      name: 'پروژه ها'
     }
   ],
   [
@@ -42,7 +42,8 @@ export const persian = [
   ],
   [
     {
-      title: 'درباره من',
+      title: 'ارتباط با من',
+      text: 'پیام خود را ارسال کنید از طریق ایمیل پاسخ میدهم',
       name: 'اسم',
       email: 'ایمیل',
       message: 'پیام',
@@ -53,9 +54,9 @@ export const persian = [
     {
       title: 'من رو بشناسید',
       dis: 
-      '',
+      'در راستای افزایش سطح آگاهی اعضای هیات مدیره صنایع بازار سرمایه با موضوع حاکمیت شرکتی،',
       dis1: 
-      '',
+      'مدیریت نظارت بر ناشران در بازه زمانی ۱ الی ۴ مرداد ماه ۱۴۰۲ اقدام به برگزاری ۸ جلسه آموزشی در دو نوبت',
       button: 'پروژه ها',
       titleSkill: 'مهارت ها',
       skills: [
@@ -83,7 +84,7 @@ export const persian = [
       Link3: imgLink3,
       Link4: imgLink4,
       Link5: imgLink5,
-      title: 'BodyMake',
+      title: '(BodyBuild) بدنسازی',
       dis: '',
       skills: [
         'ReactJs',
@@ -102,7 +103,7 @@ export const persian = [
         }
       ],
       button: 'مشاهده توضیحات',
-      titlePerview: 'BodyMake.توضیحات',
+      titlePerview: 'BodyBuild توضیحات',
       details: [
         {
           link: imgLink3,
@@ -120,6 +121,16 @@ export const persian = [
           dis: ''
         }
       ]
+    }
+  ],
+  [
+    {
+      aboutTitle: 'درباره من',
+      aboutDis: 'درباره من و مهارت هام بیشتر بخوانید',
+      ProjectsTitle: 'پروژه ها',
+      ProjectsDis: 'تعدادی از پروژه هایی که انجام دادم رو برسی کنید',
+      ContactTitle: 'ارتباط با من',
+      ContactDis: 'پیام خود را ارسال کنید از طریق ایمیل پاسخ میدهم'
     }
   ]
 ]
@@ -161,10 +172,11 @@ export const english = [
   [
     {
       title: 'contact me',
+      text: 'send me a message ill answer you via email',
       name: 'Name',
       email: 'Email',
       message: 'Message',
-      submit: 'send'
+      submit: 'Send'
     }
   ],
   [
@@ -199,9 +211,9 @@ export const english = [
       Link3: imgLink3,
       Link4: imgLink4,
       Link5: imgLink5,
-      title: 'BodyMake',
+      title: 'BodyBuild',
       dis: 
-      'this is my first project i made this site 1mounth ago its fully responsive and has some nice animations and has alot of features like shop card signin/signout acount info and much more.. take a look at the site!',
+      'this is my first project i made it very premitive cause i made it long ago but its worth looking at',
       skills: [
         'ReactJs',
         'ReduxToolkit',
@@ -219,24 +231,34 @@ export const english = [
         }
       ],
       button: 'Perview',
-      titlePerview: 'BodyMake.perview',
+      titlePerview: 'BodyBuild.Perview',
       details: [
         {
           link: imgLink3,
           name: 'Sign up and Sign in',
-          dis: 'jfads jasdlkj; '
+          dis: 'you can sign up and sign in and see your account detailes'
         },
         {
           link: imgLink5,
           name: 'shop and shopping card',
-          dis: ''
+          dis: 'you can shop add items you shopping card and change the amount of them or delete them from your card'
         },
         {
           link: imgLink4,
           name: 'submit openion',
-          dis: ''
+          dis: 'you can submit your openion'
         }
       ]
+    }
+  ],
+  [
+    {
+      aboutTitle: 'About Me',
+      aboutDis: 'Read More About Me and My Skills',
+      ProjectsTitle: 'Projects',
+      ProjectsDis: 'take a look at some of my my projects',
+      ContactTitle: 'Contact Me',
+      ContactDis: 'Send me a message ill answer you via email'
     }
   ]
 ]

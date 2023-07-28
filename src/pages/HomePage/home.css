@@ -1,0 +1,79 @@
+.Homesection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 4.5rem;
+  height: max-content;
+  width: 100vw;
+}
+
+.Homep {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4.5rem;
+  height: max-content;
+  width: 100vw;
+  gap: 3rem;
+}
+
+.HomepTitlec {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.HomepTitle,
+.HomepDis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  font-size: 2.5rem;
+  max-width: 75rem;
+}
+
+.HomepDis {
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 640px) {
+
+} 
+
+@media only screen and (max-width: 640px) and (min-width: 480px) {
+  .HomepTitlec {
+    width: 90%;
+  }
+  .HomepTitle {
+    font-size: 2rem;
+    width: 100%;
+    max-width: 70rem;
+  }
+
+  .HomepDis {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    width: 100%;
+    max-width: 70rem;
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 0) { 
+  .HomepTitlec {
+    width: 95%;
+  }
+  .HomepTitle {
+    font-size: 1.5rem;
+    width: 100%;
+    max-width: 70rem;
+  }
+
+  .HomepDis {
+    font-size: clamp(.5rem, 4.3vw, 1.2rem);
+    width: 100%;
+    max-width: 70rem;
+  }
+}

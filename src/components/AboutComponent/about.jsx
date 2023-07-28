@@ -10,7 +10,7 @@ import { english } from '../../data'
 const AboutComponent = () => {
   const ui = useSelector((state) => state.ui)
   return (
-    <div id='about' className='AboutContainer'>
+    <div language={ui.language} className='AboutContainer'>
       {(ui.language == 'persian' ?
       persian[4] : english[4])
       .map((li) => {
@@ -20,7 +20,7 @@ const AboutComponent = () => {
               <h1>{li.title}</h1>
               <p>{li.dis}</p>
               <p>{li.dis1}</p>
-              <Link href='/projects'>
+              <Link to='/project'>
                 <span></span>
                 <span></span>
                 {li.button}

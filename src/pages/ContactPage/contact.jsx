@@ -5,13 +5,14 @@ import { useSelector } from 'react-redux'
 
 import ContactComponent from '../../components/contactComponent/contact'
 
-const ContactPage = () => {
+const ContactPage = ({homeEdition}) => {
   const ui = useSelector((state) => state.ui)
   const styles = ui.font
+  console.log(homeEdition)
 
   return (
     <section style={{fontFamily: styles}} className='Contactsection'>
-      <ContactComponent />
+      <ContactComponent homeEdition={homeEdition} />
     </section>
   )
 }

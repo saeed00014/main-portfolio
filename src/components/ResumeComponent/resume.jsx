@@ -10,7 +10,7 @@ const ResumeComponent = () => {
   const ui = useSelector((state) => state.ui)
 
   return (
-    <div className='resumeImg'>
+    <div language={ui.language} className='resumeImg'>
       {ui.language == 'persian' ? 
       <img src={persian} alt='persian resume' />
       : <img src={english} alt='english resume' />

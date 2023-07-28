@@ -2,6 +2,7 @@ import './homeHeader.css'
 
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 import { useSelector } from 'react-redux'
 
 import { AiFillGithub } from 'react-icons/ai'
@@ -15,7 +16,7 @@ const HomeHeaderComponent = () => {
   const ui = useSelector((state) => state.ui)
 
   return (
-    <section className='HomeHeadersection'>
+    <section language={ui.language} className='HomeHeadersection'>
       <div className='HomeHeadercontainer'>
         <div className='HomeHeadercontent'>
           {(ui.language == 'persian' ?
@@ -64,12 +65,12 @@ const HomeHeaderComponent = () => {
             )
           })}
         </div>
-        <Link to='/#about' className='HomeHeaderspin'>
+        <HashLink to='/#about' className='HomeHeaderspin'>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-        </Link>
+        </HashLink>
       </div>
     </section>
   )

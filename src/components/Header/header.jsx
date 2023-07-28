@@ -33,7 +33,7 @@ const Header = () => {
   }
 
   return (
-    <header className='Headerheader'>
+    <header style={{fontFamily: ui.font}} className='Headerheader'>
     <div className='Headercontainer'>
       <div className='HeaderlogoContainer'>
         <Link onClick={handleDelhamb} to='/' >  

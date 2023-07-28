@@ -15,6 +15,7 @@
   align-items: center;
   width: 80%;
   max-width: 70rem;
+  gap: 3rem;
 }
 
 .ProjectprojectItself {
@@ -23,6 +24,11 @@
   justify-content: flex-end;
   align-items: center;
   gap: 5%;
+  padding-top: 2rem;
+}
+
+.Projectcontainer[language='persian'] .ProjectprojectItself {
+  flex-direction: row;
 }
 
 .Projectpic {
@@ -61,10 +67,13 @@
   gap: 2.2rem;
 }
 
+.Projectcontainer[language='persian'] .Projectdetails * {
+ text-align: end;
+ flex-direction: row-reverse;
+}
+
 .ProjectprojectName {
   width: 100%;
-  margin: 0;
-  margin-bottom: -1rem;
   font-size: 1.5rem;
 }
 
@@ -89,22 +98,25 @@
 
 .ProjectprojectLink {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  gap: 2rem;
+  gap: 1rem 2rem;
 }
 
 .ProjectvisitSite {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   font-size: 1.4rem;
+  width: max-content;
 }
 
 .ProjectvisitSite span:nth-child(1) {
   position: absolute;
-  top: 1.5rem;
+  top: 1.6rem;
   left: 0;
   width: 30%;
   height: .1rem;
@@ -112,49 +124,59 @@
   transition: all .5s ease;
 }
 
+.Projectcontainer[language='persian'] .ProjectvisitSite span:nth-child(1) {
+  left: initial;
+  right: 0;
+  top: 1.9rem;
+}
+
 .ProjectvisitSite:hover span:nth-child(1) {
   width: 100%;
   transition: all .5s ease;
 }
 
+.ProjectperviewTitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.Projectcontainer[language='persian'] .ProjectperviewTitle {
+  justify-content: flex-end;
+}
+
+.ProjectperviewTitle h2 {
+  display: flex;
+  font-size: 2rem;
+  gap: 1rem;
+  width: max-content;
+}
+
 .ProjectprojectPerview {
   display: flex;
   flex-direction: column;
-  margin-top: 5rem;
-}
-
-.ProjectprojectPerview h1 {
-  font-size: 2rem;
-}
-
-.ProjectperviewTitle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: -10rem;
+  width: 100%;
 }
 
 .ProjectpartOne {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 15rem;
-  gap: 3vw;
+  gap: 5%;
 }
 
-.ProjectpartOne2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 15rem;
-  gap: 3vw;
+.Projectcontainer[language='persian'] .ProjectpartOne {
+  flex-direction: row-reverse;
 }
 
-.partOne img,
-.ProjectpartOne2 img {
-  object-fit: contain;
+.ProjectpartOneImg {
   width: 100%;
-  height: max-content;
+}
+
+.ProjectpartOne img{
+  object-fit: cover;
+  width: 100%;
+  height: 386px;
   min-width: 25rem;
   border: .2rem solid var(--global-color-primary);
   scale: 1;
@@ -163,12 +185,24 @@
 .ProjectpartOneDetails {
   display: flex;
   flex-direction: column;
-  width: 20%;
+  justify-content: center;
+  width: 100%;
   gap: .5rem;
 }
 
+.Projectcontainer[language='persian'] .ProjectpartOneDetails, 
+.Projectcontainer[language='persian'] .ProjectpartOneDetails h1 {
+  width: 100%;
+  align-items: flex-end;
+  text-align: end;
+}
+
+.Projectcontainer[language='persian'] .ProjectpartOneDetails h1 {
+  font-size: 2.2rem;
+}
+
 .ProjectpartOneDetails p {
-  font-size: clamp(.8rem, .8vw, 1rem);
+  font-size: 1.3rem;
 }
 
 .ProjectpartOne img:hover {
@@ -220,51 +254,50 @@
 
 @media only screen and (max-width: 1024px) and (min-width: 640px) {
   .ProjectprojectItself {
-    flex-direction: column;
-    gap: 3rem;
+    gap: 1rem;
+  }
+
+  .Projectpic {
+    width: 100% !important;
   }
 
   .Projectlaptop {
+    width: 100%;
     height: 381px;
   }
 
   .Projectphone {
-    width: 9rem;
+    width: 7rem;
   }
 
   .Projectdetails {
     width: 100%;
+    min-width: initial;
   }
 
+  .Projectdetails * {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .Projectskill {
+    display: flex;
+    gap: 4rem 1rem !important;
+  }
 
   .ProjectpartOne {
-    flex-direction: column;
+    gap: 1rem;
   }
 
-  .ProjectpartOne2 {
-    flex-direction: column-reverse;
+  .ProjectpartOneDetails h1 {
+    font-size: 1.6rem !important;
+    padding-bottom: 1rem !important;
   }
-
-  .ProjectpartOne img {
-    width: 100%;
-  }
-
-  .ProjectpartOne2 img {
-    width: 100%;
-  }
-
-  .partOne,
-  .ProjectpartOne2 {
-    margin-top: 5rem;
-    gap: 2rem;
-  }
-
-  .ProjectpartOneDetails {
-    width: 100%;
-  }
-
-  .ProjectpartOneDetails p{
-    font-size: clamp(1.2rem, 2.3vw, 1.5rem);
+ 
+  .ProjectpartOneImg img {
+    min-width: initial;
+    height: 220px;
+    object-fit: cover;
   }
 } 
 
@@ -275,7 +308,12 @@
 
   .ProjectprojectItself {
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
+  }
+
+  .Projectcontainer[language='persian'] .ProjectprojectItself {
+    flex-direction: column;
+    gap: 2rem;
   }
 
   .Projectpic {
@@ -297,29 +335,18 @@
   }
 
   .ProjectpartOne {
-    flex-direction: column;
+    gap: .5rem;
   }
 
-  .ProjectpartOne2 {
-    flex-direction: column-reverse;
+  .ProjectpartOneDetails h1 {
+    font-size: 1.6rem !important;
+    padding-bottom: 1rem !important;
   }
-
+ 
   .ProjectpartOne img {
-    width: 100%;
-  }
-
-  .ProjectpartOne2 img {
-    width: 100%;
-  }
-
-  .partOne,
-  .ProjectpartOne2 {
-    margin-top: 5rem;
-    gap: 2rem;
-  }
-
-  .ProjectpartOneDetails {
-    width: 100%;
+    min-width: initial;
+    height: 220px;
+    object-fit: cover;
   }
 }
 
@@ -330,7 +357,12 @@
 
   .ProjectprojectItself {
     flex-direction: column;
-    gap: 3rem;
+    gap: 1.5rem;
+  }
+
+  .Projectcontainer[language='persian'] .ProjectprojectItself {
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .Projectpic {
@@ -341,6 +373,10 @@
     object-fit: contain;
     width: 100%;
     height: 100%;
+  }
+
+  .Projectdetails {
+    gap: 1rem;
   }
 
   .Projecttitle {
@@ -376,6 +412,16 @@
     right: 2%;
   }
 
+  .ProjectprojectLink {
+    flex-wrap: wrap;
+    width: 100%;
+    gap: .8rem;
+  }
+
+  .ProjectprojectLink a {
+    font-size: 1.3rem;
+  }
+
   .Projectdetails {
     width: 100%;
   }
@@ -384,37 +430,43 @@
     width: 100%;
   }
 
+  .ProjectperviewTitle {
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  .ProjectperviewTitle h2 {
+    font-size: 1.5rem;
+    gap: .3rem;
+  }
+
+  .ProjectperviewTitle h2 * {
+    height: 2rem;
+  }
+
   .ProjectpartOne {
     flex-direction: column;
-  }
-
-  .ProjectpartOne2 {
-    flex-direction: column-reverse;
+    gap: 1rem;
   }
   
-  .partOne,
-  .ProjectpartOne2 {
-    margin-top: 5rem;
-    gap: 1.5rem;
-    width: 100%;
-    min-width: initial;
-  }
-  
-  .partOne img,
-  .ProjectpartOne2 img {
-    width: 100%;
-    min-width: initial;      
-  }
-
-  .partOne p,
-  .ProjectpartOne2 p {
-    font-size: 1rem;
+  .Projectcontainer[language='persian'] .ProjectpartOne {
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .ProjectpartOneDetails {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    gap: .5rem;
+  }
+
+  .ProjectpartOneDetails h1 {
+    font-size: 1.6rem !important;
+    padding-bottom: 1rem !important;
+  }
+ 
+  .ProjectpartOne img {
+    height: initial;
+    min-width: initial;
+    min-height: 200px;
   }
 }

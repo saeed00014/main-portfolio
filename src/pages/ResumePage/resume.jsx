@@ -13,7 +13,7 @@ const ResumePage = () => {
   const styles = ui.font
 
   return (
-    <section style={{fontFamily: styles}} className='Resumesection'>
+    <section language={ui.language} style={{fontFamily: styles}} className='Resumesection'>
       {(ui.language == 'persian' ?
         persian[2] : english[2])
         .map((li) => {
