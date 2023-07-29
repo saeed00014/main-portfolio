@@ -39,6 +39,7 @@
 
 .FormContainer form input,
 .FormContainer form textarea {
+  padding: 0 .5rem;
   height: 2rem;
   width: 85%;
   background-color: #537d8f;
@@ -54,11 +55,19 @@
   justify-content: flex-end;
 }
 
+.FormContainer[language='persian'] form input,
+.FormContainer[language='persian'] form textarea {
+  text-align: end;
+}
+
 .FormContainer form textarea {
   height: 6rem;
 }
 
 .FormContainer form input:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 10rem;
   height: 2.5rem;
   margin-top: 1rem;

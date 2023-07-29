@@ -32,6 +32,10 @@ const Header = () => {
     setHamb(false)
   }
 
+  const handleLanguage = (lang) => {
+    dispatch(languageState(lang))
+  }
+
   return (
     <header style={{fontFamily: ui.font}} className='Headerheader'>
     <div className='Headercontainer'>
@@ -45,8 +49,8 @@ const Header = () => {
           <li>
             <button>
               {ui.language == 'persian' ?
-                <IR onClick={() => dispatch(languageState('english'))} title="Islamic Republic of Iran" className="..."/>
-                :<US onClick={() => dispatch(languageState('persian'))} title="United Kingdom" className="..."/>
+                <IR onClick={() => handleLanguage('english')} title="Islamic Republic of Iran" className="..."/>
+                :<US onClick={() => handleLanguage('persian')} title="United Kingdom" className="..."/>
               }
             </button>
           </li>
@@ -61,8 +65,8 @@ const Header = () => {
         </ul>
         <button className='languageButton'>
         {ui.language == 'persian' ?
-          <IR onClick={() => dispatch(languageState('english'))} title="Islamic Republic of Iran" className="..."/>
-          :<US onClick={() => dispatch(languageState('persian'))} title="United Kingdom" className="..."/>
+          <IR onClick={() => handleLanguage('english')} title="Islamic Republic of Iran" className="..."/>
+          :<US onClick={() => handleLanguage('persian')} title="United Kingdom" className="..."/>
         }
         </button>
       </div>

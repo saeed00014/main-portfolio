@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  language: 'persian',
+  language: localStorage.getItem('LanguageSaeedPortfolio') ?
+    localStorage.getItem('LanguageSaeedPortfolio') : 'persian',
   font: 'iranyekan'
 }
 
@@ -16,6 +17,7 @@ const UiSlice = createSlice({
       }else {
         state.font = 'roboto'
       }
+      localStorage.setItem('LanguageSaeedPortfolio', action.payload)
     }
   }
 })

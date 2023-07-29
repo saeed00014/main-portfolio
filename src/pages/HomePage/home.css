@@ -25,19 +25,22 @@
   gap: .5rem;
 }
 
-.HomepTitle,
 .HomepDis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.HomepTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 85%;
+  width: 100;
   font-size: 2.5rem;
   max-width: 75rem;
-}
-
-.HomepDis {
-  font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 640px) {
@@ -49,7 +52,7 @@
     width: 90%;
   }
   .HomepTitle {
-    font-size: 2rem;
+    font-size: 1.8rem;
     width: 100%;
     max-width: 70rem;
   }
@@ -62,6 +65,10 @@
 }
 
 @media only screen and (max-width: 480px) and (min-width: 0) { 
+  .Homep {
+    gap: 2rem;
+  }
+
   .HomepTitlec {
     width: 95%;
   }
