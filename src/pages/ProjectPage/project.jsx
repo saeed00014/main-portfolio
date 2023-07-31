@@ -10,8 +10,10 @@ const ProjectPage = () => {
   const styles = ui.font
 
   return (
-    <section style={{fontFamily: styles}} className='Projectsection'>
-      <h1>Project .</h1>
+    <section language={ui.language} style={{fontFamily: styles}} className='Projectsection'>
+      {ui.language == 'persian' ? <h1>پروژه ها</h1>
+      : <h1>Project .</h1>
+      }
       <ProjectComponent />
     </section>
   )

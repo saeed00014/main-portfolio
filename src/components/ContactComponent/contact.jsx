@@ -35,13 +35,19 @@ const ContactComponent = ({homeEdition}) => {
   }, [alert])
 
   const onBlur = (e) => {
-    console.log(e)
-    if(e.target.name == 'message') {
+    console.log(e.target.value)
+    if(e.target.name == 'message' && e.target.value == '') {
       setError2(true)
-    }else if (e.target.name == 'user_email') {
+    }else if (e.target.name == 'user_email' && e.target.value == '') {
       setError1(true)
-    }else {
+    }else if (e.target.name == 'user_name' && e.target.value == '') {
       setError(true)
+    }if(e.target.name == 'message' && e.target.value != '') {
+      setError2(false)
+    }else if (e.target.name == 'user_email' && e.target.value != '') {
+      setError1(false)
+    }else if (e.target.name == 'user_name' && e.target.value != '') {
+      setError(false)
     }
   }
 
@@ -92,7 +98,7 @@ const ContactComponent = ({homeEdition}) => {
                   ? 'باید بین 3 تا 12 حرف باشد' : 'must contain 3-12 characters'}
                 required= {true}/>
                 {error2 && <p>{ui.language == 'persian' 
-                  ? 'باید بین 3 تا 12 حرف باشد' : 'must contain 3-12 characters'}</p>}
+                  ? 'باید بین 9 تا 212 حرف باشد' : 'must contain 9-212 characters'}</p>}
               <input style={{fontFamily: ui.font}} type="submit" value={li.submit} />
             </form>
           )
