@@ -4,6 +4,16 @@ import imgLink3 from './images/bodySign.png'
 import imgLink4 from './images/bodyForm.png'
 import imgLink5 from './images/bodyCard.png'
 
+import Ajorplusphone from './images/Ajorplusphone.png'
+import Ajorplushdash from './images/Ajorplushdash.png'
+import Ajorplusdata from './images/Ajorplusdata.png'
+import Ajorpluslogin from './images/Ajorpluslogin.png'
+import Ajorplususer from './images/Ajorplususer.png'
+import Ajorplusedit from './images/Ajorplusedit.png'
+import Ajorplusqomer from './images/Ajorplusqomer.png'
+
+import AjorPlus from './videos/AjorplusVideo.mp4'
+
 export const persian = [
   [
     {
@@ -85,7 +95,7 @@ export const persian = [
       Link4: imgLink4,
       Link5: imgLink5,
       title: '(BodyBuild) بدنسازی',
-      dis: '',
+      dis: 'این اولین کار من بوده که خیلی وقت پیش درستش کردم کاملا ریسپانسیوه و فروشگاه و بخش ساین این و ساین اوت داره',
       skills: [
         'ReactJs',
         'ReduxToolkit',
@@ -119,6 +129,51 @@ export const persian = [
           link: imgLink4,
           name: 'بخش نظرات و بازخوردها',
           dis: ''
+        }
+      ]
+    },
+    {
+      Link1: Ajorplushdash,
+      Link2: Ajorplusphone,
+      Link4: Ajorpluslogin,
+      Link3: Ajorplusdata,
+      Link5: Ajorplususer,
+      Link5: Ajorplusqomer,
+      title: 'آجر پلاس',
+      dis:
+      'این یک پروژه خوصوصیه که تازه تمومش کردم یک کارخونه آجره که تعدادی کوره داره و هر کوره که قابلیت تغییر اطلاعات اضافه و حذف اطلاعات اضافه کردن کاربر با سطح دسترسی لاگین و... رو داره',
+      skills: [
+        'ReactJs',
+        'ReduxToolkit',
+        'php',
+        'mysql'
+      ],
+      links: [
+        
+      ],
+      button: 'مشاهده توضیحات',
+      titlePerview: 'AjorPlus توضیحات',
+      video: AjorPlus,
+      details: [
+        {
+          link: Ajorpluslogin,
+          name: 'ورود',
+          dis: 'ورود با اطلاعات حساب کاربری'
+        },
+        {
+          link: Ajorplushdash,
+          name: 'داشبورد',
+          dis: ' اطلاعات کلی از کوره ها و وضعیت دهانه ها شون ( وضعیت پخت آجر ها و آجرهای داخل هر دهانه ) رو به همراه نمودار نشون میده'
+        },
+        {
+          link: Ajorplusdata,
+          name: 'داده ها و اطلاعات',
+          dis: 'همه داده های موجود رو دسته بندی میکنه که قابلیت جستجو دسته بندی بر اساس وضعیت و امکان نشان دار کردن داده ها بعلاوه تعریف و حذف داده رو داره'
+        },
+        {
+          link: Ajorplususer,
+          name: 'مدیریت دسترسی و کاربران',
+          dis: 'کاربران تعریف شده رو نمایش میده امکان تعریف کاربر حذف کاربر و تغییر اطلاعات کاربران و تعیین سطح دسترسی برای هر کاربر رو داره'
         }
       ]
     }
@@ -205,6 +260,51 @@ export const english = [
     }
   ],
   [
+    {
+      Link1: imgLink1,
+      Link2: imgLink2,
+      Link3: imgLink3,
+      Link4: imgLink4,
+      Link5: imgLink5,
+      title: 'BodyBuild',
+      dis: 
+      'this is my first project i made it very premitive cause i made it long ago but its worth looking at',
+      skills: [
+        'ReactJs',
+        'ReduxToolkit',
+        'ExpressJs',
+        'RestApi'
+      ],
+      links: [
+        {
+          name: 'VisitSite',
+          link: 'https://comfy-fenglisu-3f8324.netlify.app/',
+        },
+        {
+          name: 'GitHub',
+          link: 'https://comfy-fenglisu-3f8324.netlify.app/',
+        }
+      ],
+      button: 'Perview',
+      titlePerview: 'BodyBuild.Perview',
+      details: [
+        {
+          link: imgLink3,
+          name: 'Sign up and Sign in',
+          dis: 'you can sign up and sign in and see your account detailes'
+        },
+        {
+          link: imgLink5,
+          name: 'shop and shopping card',
+          dis: 'you can shop add items you shopping card and change the amount of them or delete them from your card'
+        },
+        {
+          link: imgLink4,
+          name: 'submit openion',
+          dis: 'you can submit your openion'
+        }
+      ]
+    },
     {
       Link1: imgLink1,
       Link2: imgLink2,

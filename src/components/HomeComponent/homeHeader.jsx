@@ -14,6 +14,7 @@ import { english } from '../../data'
 
 const HomeHeaderComponent = () => {
   const ui = useSelector((state) => state.ui)
+  console.log(ui.language)
 
   return (
     <section language={ui.language} className='HomeHeadersection'>

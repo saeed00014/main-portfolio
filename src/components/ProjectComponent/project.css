@@ -8,6 +8,13 @@
   gap: 7rem;
 }
 
+.sliderContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .Projectcontent {
   display: flex;
   flex-direction: column;
@@ -23,6 +30,7 @@
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: center;
+  width: 100%;
   gap: 5%;
 }
 
@@ -102,6 +110,11 @@
   gap: 1rem 2rem;
 }
 
+.Projectcontainer[language='persian'] .ProjectprojectLink {
+  justify-content: flex-start;
+  text-align: end;
+}
+
 .ProjectvisitSite {
   position: relative;
   display: flex;
@@ -177,7 +190,6 @@
   width: 100%;
   height: 386px;
   min-width: 25rem;
-  border: .2rem solid var(--global-color-primary);
   scale: 1;
 }
 
@@ -205,19 +217,19 @@
 }
 
 .ProjectpartOne img:hover {
-  transform: rotate3d(3, -1, 0, 30deg);
+  /*transform: rotate3d(3, -1, 0, 30deg);
   transition: all .7s ease;
   animation: 1s alternate projectOne forwards .4s,
    1s alternate projectOne1 forwards .6s,
-   .8s alternate projectOne2 forwards .8s;
+   .8s alternate projectOne2 forwards .8s;*/
 }
 
 .ProjectpartOne2 img:hover {
-  transform: rotate3d(3, -1, 0, 30deg);
+  /*transform: rotate3d(3, -1, 0, 30deg);
   transition: all .7s ease;
   animation: 1s alternate projectOne forwards .4s,
    1s alternate projectOne1 forwards .6s,
-   .8s alternate projectOne2 forwards .8s;
+   .8s alternate projectOne2 forwards .8s;*/
 }
 
 @keyframes projectOne {
@@ -272,6 +284,7 @@
   .Projectdetails {
     width: 100%;
     min-width: initial;
+    gap: 1rem;
   }
 
   .Projectdetails * {
@@ -327,6 +340,10 @@
 
   .Projectphone {
     display: none;
+  }
+
+  .ProjectvisitSite {
+    font-size: 1.3rem;
   }
 
   .Projectdetails {
@@ -400,6 +417,7 @@
   .Projectskill {
     display: block;
     padding: .3rem;
+    font-size: 1rem;
   }
 
   .Projectpic {
@@ -414,11 +432,15 @@
   .ProjectprojectLink {
     flex-wrap: wrap;
     width: 100%;
-    gap: .8rem;
+    gap: 1rem;
   }
 
+  .ProjectvisitSite span:nth-child(1) {
+    top: 1.4rem !important;
+  }
+  
   .ProjectprojectLink a {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 
   .Projectdetails {

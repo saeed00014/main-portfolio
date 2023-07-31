@@ -1,0 +1,25 @@
+.imgSliderContainer {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  background-color: rgba(128, 128, 128, 0.418);
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+}
+
+.imgSliderContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgSliderContent img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 60rem;
+}

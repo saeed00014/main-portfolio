@@ -10,37 +10,40 @@ import AlertComponent from '../AlertComponent/alert';
 
 const ContactComponent = ({homeEdition}) => {
   const [alert, setAlert] = useState('')
-  const [edition, setEdition] = useState('')
   const ui = useSelector((state) => state.ui)
   const form = useRef();
 
-  
+  const [error, setError] = useState(false)
+  const [error1, setError1] = useState(false)
+  const [error2, setError2] = useState(false)
+
   const sendEmail = async (e) => {
     e.preventDefault();
-    console.log('sss')
     
     emailjs.sendForm('service_h32hvev', 'template_qe6dp0i', form.current, 'JcRK8-MYkgHcGvr_7')
     .then((result) => {
       setAlert(result)
     }, (error) => {
-      console.log(error)
       setAlert(error)
     });
   }
 
   useEffect(() => {
-    if(homeEdition) {
-      setEdition('true')
-    }else {
-      setEdition('false')
-    }
-  }, [homeEdition])
-  
-  useEffect(() => {
     setTimeout(() => {
       setAlert('')
     }, 2000)
   }, [alert])
+
+  const onBlur = (e) => {
+    console.log(e)
+    if(e.target.name == 'message') {
+      setError2(true)
+    }else if (e.target.name == 'user_email') {
+      setError1(true)
+    }else {
+      setError(true)
+    }
+  }
 
   return (
     <div language={ui.language} className='FormContainer'>
@@ -48,7 +51,7 @@ const ContactComponent = ({homeEdition}) => {
         persian[3] : english[3])
         .map((li) => {
           return (
-            <form homeEdition={edition} ref={form} onSubmit={sendEmail}>
+            <form homeEdition={homeEdition} ref={form} onSubmit={sendEmail}>
               {homeEdition != 'true' && 
                 <>
                   <h1>{li.title}</h1>
@@ -56,16 +59,45 @@ const ContactComponent = ({homeEdition}) => {
                 </>
               }
               <label>{li.name}</label>
-              <input style={{fontFamily: ui.font}} type="text" name="user_name" />
+              <input 
+                onBlur={(e) => onBlur(e)}
+                style={{fontFamily: ui.font}}
+                type="text" 
+                name="user_name" 
+                pattern="^[A-Za-z0-9]{3,12}$"
+                errorMessage= {ui.language == 'persian' 
+                  ? 'باید بین 3 تا 12 حرف باشد' : 'must contain 3-12 characters'}
+                required= {true}/>
+                {error && <p>{ui.language == 'persian' 
+                  ? 'باید بین 3 تا 12 حرف باشد' : 'must contain 3-12 characters'}</p>}
               <label>{li.email}</label>
-              <input style={{fontFamily: ui.font}} type="email" name="user_email" />
+              <input 
+                onBlur={(e) => onBlur(e)}
+                style={{fontFamily: ui.font}} 
+                type="email" 
+                name="user_email"
+                errorMessage= {ui.language == 'persian' 
+                ? 'ایمیل موجود نیست' : 'not valid email'}
+                required= {true}/>
+                {error1 && <p>{ui.language == 'persian' 
+                ? 'ایمیل موجود نیست' : 'not valid email'}</p>}
               <label>{li.message}</label>
-              <textarea style={{fontFamily: ui.font}} type='text' name="message" />
+              <textarea 
+                onBlur={(e) => onBlur(e)}
+                style={{fontFamily: ui.font}} 
+                type='text' 
+                name="message" 
+                pattern="^[A-Za-z0-9]{9,212}$"
+                errorMessage= {ui.language == 'persian' 
+                  ? 'باید بین 3 تا 12 حرف باشد' : 'must contain 3-12 characters'}
+                required= {true}/>
+                {error2 && <p>{ui.language == 'persian' 
+                  ? 'باید بین 3 تا 12 حرف باشد' : 'must contain 3-12 characters'}</p>}
               <input style={{fontFamily: ui.font}} type="submit" value={li.submit} />
             </form>
           )
         })}
-        {alert && <AlertComponent result={alert} />}
+        {alert && <AlertComponent result={alert} content='contact' />}
     </div>
   )
 }

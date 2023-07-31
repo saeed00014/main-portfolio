@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   language: localStorage.getItem('LanguageSaeedPortfolio') ?
     localStorage.getItem('LanguageSaeedPortfolio') : 'persian',
-  font: 'iranyekan'
+  font: (localStorage.getItem('LanguageSaeedPortfolio') == 'persian') ? 'iranyekan' : 'roboto' ,
 }
 
 const UiSlice = createSlice({
@@ -12,7 +12,7 @@ const UiSlice = createSlice({
   reducers: {
     languageState(state, action) {
       state.language = action.payload
-      if(action.payload == 'persian') {
+      if(action.payload == 'persian'){
         state.font = 'iranyekan'
       }else {
         state.font = 'roboto'

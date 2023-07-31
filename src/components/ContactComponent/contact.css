@@ -30,11 +30,22 @@
   justify-content: center;
 }
 
-.FormContainer form p {
+.FormContainer form p:nth-child(2) {
   width: 100%;
   display: flex;
   justify-content: center;
   padding-bottom: 1rem;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);  
+}
+
+.FormContainer form p {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: red;
+  padding: -.8rem 0 !important;
+  font-size: .8rem;
 }
 
 .FormContainer form input,
@@ -88,10 +99,19 @@
     padding: 1rem 0;
   }
 
+  .FormContainer form p {
+    font-size: clamp(.5rem, 4.4vw, 1rem);
+  }
+  
+  .FormContainer[language='persian'] form p {
+    font-size: clamp(.5rem, 4vw, .9rem);
+  }
+
   .FormContainer form p,
   .FormContainer form input,
   .FormContainer form textarea,
   .FormContainer form label {
     width: 95%;
+    max-width: 20rem;
   }
 }
