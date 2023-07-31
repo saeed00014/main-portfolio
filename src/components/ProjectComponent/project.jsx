@@ -35,7 +35,7 @@ const ProjectComponent = ({homeEdition}) => {
         persian[5] : english[5])
         .map((li) => {
           return (
-            <div className="Projectcontent">
+            <div id={li.id} className="Projectcontent">
               <div className="ProjectprojectItself">
                 <div className="Projectpic">
                   <img src={li.Link1} className="Projectlaptop" alt="laptop size" />

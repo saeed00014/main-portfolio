@@ -62,6 +62,9 @@ const HomeHeaderComponent = () => {
                   </a>
                 </li>
               </ul>
+              <div className='HomeHeaderemailLink'>
+                <p>saeedm00014@gmail.com</p>
+              </div>
             </>
             )
           })}

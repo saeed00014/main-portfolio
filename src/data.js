@@ -89,50 +89,7 @@ export const persian = [
   ],
   [
     {
-      Link1: imgLink1,
-      Link2: imgLink2,
-      Link3: imgLink3,
-      Link4: imgLink4,
-      Link5: imgLink5,
-      title: '(BodyBuild) بدنسازی',
-      dis: 'این اولین کار من بوده که خیلی وقت پیش درستش کردم کاملا ریسپانسیوه و فروشگاه و بخش ساین این و ساین اوت داره',
-      skills: [
-        'ReactJs',
-        'ReduxToolkit',
-        'ExpressJs',
-        'RestApi'
-      ],
-      links: [
-        {
-          name: 'مشاهده سایت',
-          link: 'https://comfy-fenglisu-3f8324.netlify.app/',
-        },
-        {
-          name: 'گیت هاب',
-          link: 'https://comfy-fenglisu-3f8324.netlify.app/',
-        }
-      ],
-      button: 'مشاهده توضیحات',
-      titlePerview: 'BodyBuild توضیحات',
-      details: [
-        {
-          link: imgLink3,
-          name: 'ثبت نام و ورود',
-          dis: 'امکان ساخت اکانت کاربری و ورود به آن'
-        },
-        {
-          link: imgLink5,
-          name: 'فروشگاه و سبد خرید',
-          dis: 'اضافه کردن محصولات به کارت خرید و تغییر مقدار وحذف آن'
-        },
-        {
-          link: imgLink4,
-          name: 'بخش نظرات و بازخوردها',
-          dis: 'اضافه کردن نظر خود'
-        }
-      ]
-    },
-    {
+      id: 'ajor',
       Link1: Ajorplushdash,
       Link2: Ajorplusphone,
       Link4: Ajorpluslogin,
@@ -174,6 +131,51 @@ export const persian = [
           link: Ajorplususer,
           name: 'مدیریت دسترسی و کاربران',
           dis: 'کاربران تعریف شده رو نمایش میده امکان تعریف کاربر حذف کاربر و تغییر اطلاعات کاربران و تعیین سطح دسترسی برای هر کاربر رو داره'
+        }
+      ]
+    },
+    {
+      id: 'bodybiuld',
+      Link1: imgLink1,
+      Link2: imgLink2,
+      Link3: imgLink3,
+      Link4: imgLink4,
+      Link5: imgLink5,
+      title: '(BodyBuild) بدنسازی',
+      dis: 'این اولین کار من بوده که خیلی وقت پیش درستش کردم کاملا ریسپانسیوه و فروشگاه و بخش ساین این و ساین اوت داره',
+      skills: [
+        'ReactJs',
+        'ReduxToolkit',
+        'ExpressJs',
+        'RestApi'
+      ],
+      links: [
+        {
+          name: 'مشاهده سایت',
+          link: 'https://comfy-fenglisu-3f8324.netlify.app/',
+        },
+        {
+          name: 'گیت هاب',
+          link: 'https://comfy-fenglisu-3f8324.netlify.app/',
+        }
+      ],
+      button: 'مشاهده توضیحات',
+      titlePerview: 'BodyBuild توضیحات',
+      details: [
+        {
+          link: imgLink3,
+          name: 'ثبت نام و ورود',
+          dis: 'امکان ساخت اکانت کاربری و ورود به آن'
+        },
+        {
+          link: imgLink5,
+          name: 'فروشگاه و سبد خرید',
+          dis: 'اضافه کردن محصولات به کارت خرید و تغییر مقدار وحذف آن'
+        },
+        {
+          link: imgLink4,
+          name: 'بخش نظرات و بازخوردها',
+          dis: 'اضافه کردن نظر خود'
         }
       ]
     }
@@ -261,47 +263,48 @@ export const english = [
   ],
   [
     {
-      Link1: imgLink1,
-      Link2: imgLink2,
-      Link3: imgLink3,
-      Link4: imgLink4,
-      Link5: imgLink5,
-      title: 'BodyBuild',
-      dis: 
-      'this is my first project i made it very premitive cause i made it long ago but its worth looking at',
+      id: 'ajor',
+      Link1: Ajorplushdash,
+      Link2: Ajorplusphone,
+      Link4: Ajorpluslogin,
+      Link3: Ajorplusdata,
+      Link5: Ajorplususer,
+      Link5: Ajorplusqomer,
+      title: 'آجر پلاس',
+      dis:
+      'این یک پروژه خوصوصیه که تازه تمومش کردم یک کارخونه آجره که تعدادی کوره داره و هر کوره که قابلیت تغییر اطلاعات اضافه و حذف اطلاعات اضافه کردن کاربر با سطح دسترسی لاگین و... رو داره',
       skills: [
         'ReactJs',
         'ReduxToolkit',
-        'ExpressJs',
-        'RestApi'
+        'php',
+        'mysql'
       ],
       links: [
-        {
-          name: 'VisitSite',
-          link: 'https://comfy-fenglisu-3f8324.netlify.app/',
-        },
-        {
-          name: 'GitHub',
-          link: 'https://comfy-fenglisu-3f8324.netlify.app/',
-        }
+        
       ],
-      button: 'Perview',
-      titlePerview: 'BodyBuild.Perview',
+      button: 'مشاهده توضیحات',
+      titlePerview: 'AjorPlus توضیحات',
+      video: AjorPlus,
       details: [
         {
-          link: imgLink3,
-          name: 'Sign up and Sign in',
-          dis: 'you can sign up and sign in and see your account detailes'
+          link: Ajorpluslogin,
+          name: 'ورود',
+          dis: 'ورود با اطلاعات حساب کاربری'
         },
         {
-          link: imgLink5,
-          name: 'shop and shopping card',
-          dis: 'you can shop add items you shopping card and change the amount of them or delete them from your card'
+          link: Ajorplushdash,
+          name: 'داشبورد',
+          dis: ' اطلاعات کلی از کوره ها و وضعیت دهانه ها شون ( وضعیت پخت آجر ها و آجرهای داخل هر دهانه ) رو به همراه نمودار نشون میده'
         },
         {
-          link: imgLink4,
-          name: 'submit openion',
-          dis: 'you can submit your openion'
+          link: Ajorplusdata,
+          name: 'داده ها و اطلاعات',
+          dis: 'همه داده های موجود رو دسته بندی میکنه که قابلیت جستجو دسته بندی بر اساس وضعیت و امکان نشان دار کردن داده ها بعلاوه تعریف و حذف داده رو داره'
+        },
+        {
+          link: Ajorplususer,
+          name: 'مدیریت دسترسی و کاربران',
+          dis: 'کاربران تعریف شده رو نمایش میده امکان تعریف کاربر حذف کاربر و تغییر اطلاعات کاربران و تعیین سطح دسترسی برای هر کاربر رو داره'
         }
       ]
     },
