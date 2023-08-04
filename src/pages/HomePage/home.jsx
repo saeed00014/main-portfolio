@@ -21,7 +21,7 @@ const HomePage = () => {
     persian[6] : english[6])
       .map((li) => {
         return (
-          <section language={ui.language} className='Homesection' style={{fontFamily: `${styles}`}}>
+          <section key={li.aboutTitle} language={ui.language} className='Homesection' style={{fontFamily: `${styles}`}}>
             <HomeHeaderComponent />
             <div id='about' className='Homep'>
               <div className='HomepTitlec'>
@@ -35,14 +35,14 @@ const HomePage = () => {
                 <h1 className='HomepTitle'>{li.ProjectsTitle}</h1>
                 <p className='HomepDis'>{li.ProjectsDis}</p>
               </div>
-              <ProjectComponent homeEdition='true' />
+              <ProjectComponent homeedition='true' />
             </div>
             <div className='Homep'>
               <div className='HomepTitlec'>
                 <h1 className='HomepTitle'>{li.ContactTitle}</h1>
                 <p className='HomepDis'>{li.ContactDis}</p>
               </div>
-            <ContactComponent homeEdition='true' />
+            <ContactComponent homeedition='true' />
             </div>
           </section>
         )

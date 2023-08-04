@@ -18,7 +18,7 @@ const ResumePage = () => {
         persian[2] : english[2])
         .map((li) => {
           return (
-            <div className='Resumehead'>
+            <div key={li.title} className='Resumehead'>
               <h1>{li.title}</h1>
               <ResumeComponent />
               <a href={li.link}>{li.dis}</a>

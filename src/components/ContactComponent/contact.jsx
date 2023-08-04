@@ -8,7 +8,7 @@ import { persian } from '../../data';
 import { english } from '../../data';
 import AlertComponent from '../AlertComponent/alert';
 
-const ContactComponent = ({homeEdition}) => {
+const ContactComponent = ({homeedition}) => {
   const [alert, setAlert] = useState('')
   const ui = useSelector((state) => state.ui)
   const form = useRef();
@@ -35,7 +35,6 @@ const ContactComponent = ({homeEdition}) => {
   }, [alert])
 
   const onBlur = (e) => {
-    console.log(e.target.value)
     if(e.target.name == 'message' && e.target.value == '') {
       setError2(true)
     }else if (e.target.name == 'user_email' && e.target.value == '') {
@@ -57,8 +56,8 @@ const ContactComponent = ({homeEdition}) => {
         persian[3] : english[3])
         .map((li) => {
           return (
-            <form homeEdition={homeEdition} ref={form} onSubmit={sendEmail}>
-              {homeEdition != 'true' && 
+            <form key={li.title} homeedition={homeedition} ref={form} onSubmit={sendEmail}>
+              {homeedition != 'true' && 
                 <>
                   <h1>{li.title}</h1>
                   <p>{li.text}</p>
@@ -71,8 +70,6 @@ const ContactComponent = ({homeEdition}) => {
                 type="text" 
                 name="user_name" 
                 pattern="^[A-Za-z0-9]{3,12}$"
-                errorMessage= {ui.language == 'persian' 
-                  ? 'باید بین 3 تا 12 حرف باشد' : 'must contain 3-12 characters'}
                 required= {true}/>
                 {error && <p>{ui.language == 'persian' 
                   ? 'باید بین 3 تا 12 حرف باشد' : 'must contain 3-12 characters'}</p>}
@@ -82,8 +79,6 @@ const ContactComponent = ({homeEdition}) => {
                 style={{fontFamily: ui.font}} 
                 type="email" 
                 name="user_email"
-                errorMessage= {ui.language == 'persian' 
-                ? 'ایمیل موجود نیست' : 'not valid email'}
                 required= {true}/>
                 {error1 && <p>{ui.language == 'persian' 
                 ? 'ایمیل موجود نیست' : 'not valid email'}</p>}
@@ -94,8 +89,6 @@ const ContactComponent = ({homeEdition}) => {
                 type='text' 
                 name="message" 
                 pattern="^[A-Za-z0-9]{9,212}$"
-                errorMessage= {ui.language == 'persian' 
-                  ? 'باید بین 3 تا 12 حرف باشد' : 'must contain 3-12 characters'}
                 required= {true}/>
                 {error2 && <p>{ui.language == 'persian' 
                   ? 'باید بین 9 تا 212 حرف باشد' : 'must contain 9-212 characters'}</p>}

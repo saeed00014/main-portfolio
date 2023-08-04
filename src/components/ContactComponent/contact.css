@@ -20,7 +20,7 @@
   border-radius: 1rem;
 }
 
-.FormContainer form[homeEdition = false] {
+.FormContainer form[homeedition = false] {
   margin-top: 8rem;
 }
 

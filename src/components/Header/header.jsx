@@ -58,7 +58,7 @@ const Header = () => {
             persian[0] : english[0])
             .map((header) => {
               return (
-                <li onClick={handleDelhamb}><Link to={header.link}>{ hamb ? header.names : header.name}</Link></li>
+                <li key={header.link} onClick={handleDelhamb}><Link to={header.link}>{ hamb ? header.names : header.name}</Link></li>
               )
             })
           }

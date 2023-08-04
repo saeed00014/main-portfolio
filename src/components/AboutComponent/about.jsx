@@ -15,7 +15,7 @@ const AboutComponent = () => {
       persian[4] : english[4])
       .map((li) => {
         return (
-          <div className='Aboutcontent'>
+          <div key={li.title} className='Aboutcontent'>
             <div className='AboutaboutLeft'>
               <h1>{li.title}</h1>
               <p>{li.dis}</p>

@@ -7,8 +7,9 @@ import { Link } from 'react-router-dom'
 import { persian } from '../../data'
 import { english } from '../../data'
 import ImgSliderComponent from '../ImgSlider/imgSlider'
+import { HashLink } from 'react-router-hash-link'
 
-const ProjectComponent = ({homeEdition}) => {
+const ProjectComponent = ({homeedition}) => {
   const ui = useSelector((state) => state.ui)
 
   const [img, setImg] = useState('')
@@ -35,7 +36,7 @@ const ProjectComponent = ({homeEdition}) => {
         persian[5] : english[5])
         .map((li) => {
           return (
-            <div id={li.id} className="Projectcontent">
+            <div key={li.title} className="Projectcontent">
               <div className="ProjectprojectItself">
                 <div className="Projectpic">
                   <img src={li.Link1} className="Projectlaptop" alt="laptop size" />
@@ -47,7 +48,7 @@ const ProjectComponent = ({homeEdition}) => {
                   <div className="Projectskills">
                     {li.skills.map((skill) => {
                       return (
-                        <div>
+                        <div key={skill}>
                           <span className="Projectskill">{skill}</span>
                         </div>
                       )
@@ -56,24 +57,24 @@ const ProjectComponent = ({homeEdition}) => {
                   <div className="ProjectprojectLink">
                     {li.links.map((liLink) => {
                       return (
-                        <a className="ProjectvisitSite" href={liLink.link}>
+                        <a key={liLink.name} className="ProjectvisitSite" href={liLink.link}>
                           {liLink.name}
                           <span></span>
                         </a>
                       )
                     })}
-                    {homeEdition &&
-                      <Link className='ProjectvisitSite' to='/project'>
+                    {homeedition &&
+                      <HashLink className='ProjectvisitSite' to={li.HashLinks}>
                         <span></span>
                         {li.button}
-                      </Link>
+                      </HashLink>
                     }
                   </div>
                 </div>
               </div>
-              {!homeEdition &&
+              {!homeedition &&
               <>
-                <div className="ProjectperviewTitle">
+                <div id={li.id} className="ProjectperviewTitle">
                   <h2>
                     <svg width="16" height="40" viewBox="0 0 8 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.99999 18C6.46955 18 5.96085 17.7893 5.58577 17.4142C5.2107 17.0391 4.99999 16.5304 4.99999 16V13.61C5.00042 12.9513 4.83816 12.3027 4.52764 11.7218C4.21712 11.1408 3.76793 10.6456 3.21999 10.28L2.79999 10L3.21999 9.72C3.76793 9.35442 4.21712 8.85917 4.52764 8.27825C4.83816 7.69733 5.00042 7.04871 4.99999 6.39V4C4.99999 3.46957 5.2107 2.96086 5.58577 2.58579C5.96085 2.21071 6.46955 2 6.99999 2C7.2652 2 7.51956 1.89464 7.70709 1.70711C7.89463 1.51957 7.99999 1.26522 7.99999 1C7.99999 0.734784 7.89463 0.48043 7.70709 0.292893C7.51956 0.105357 7.2652 0 6.99999 0C5.93912 0 4.92171 0.421427 4.17156 1.17157C3.42142 1.92172 2.99999 2.93913 2.99999 4V6.39C3.00103 6.7202 2.92029 7.04552 2.765 7.33692C2.6097 7.62832 2.38467 7.87674 2.10999 8.06L0.449988 9.17C0.313865 9.26148 0.202329 9.38503 0.125209 9.52977C0.0480885 9.67451 0.00775146 9.836 0.00775146 10C0.00775146 10.164 0.0480885 10.3255 0.125209 10.4702C0.202329 10.615 0.313865 10.7385 0.449988 10.83L2.10999 11.94C2.38467 12.1233 2.6097 12.3717 2.765 12.6631C2.92029 12.9545 3.00103 13.2798 2.99999 13.61V16C2.99999 17.0609 3.42142 18.0783 4.17156 18.8284C4.92171 19.5786 5.93912 20 6.99999 20C7.2652 20 7.51956 19.8946 7.70709 19.7071C7.89463 19.5196 7.99999 19.2652 7.99999 19C7.99999 18.7348 7.89463 18.4804 7.70709 18.2929C7.51956 18.1054 7.2652 18 6.99999 18Z" fill="#6ec1e4"></path></svg>
                     {li.titlePerview}
@@ -88,7 +89,7 @@ const ProjectComponent = ({homeEdition}) => {
                 </div>}
                 {li.details.map((details) => {
                   return (
-                    <div className="ProjectprojectPerview">
+                    <div key={details.name} className="ProjectprojectPerview">
                       <div className="ProjectpartOne">
                         <div className="ProjectpartOneDetails">
                           <h1>{details.name}</h1>

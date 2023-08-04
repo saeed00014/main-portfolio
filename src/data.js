@@ -34,8 +34,8 @@ export const persian = [
   ],
   [
     {
-      nameRight: '. سلام، سعید هستم',
-      nameLeft: 'برنامه نویس وب',
+      nameRight: ['.هستم','سعید',',سلام'],
+      nameLeft: ['وب','نویس','برنامه'],
       disTop: 
       'من یک برنامه نویس وب هستم وب تمرکز اصلی ام بر فرانت اند هست',
       disBottom: 
@@ -68,7 +68,7 @@ export const persian = [
       dis1: 
       'مدیریت نظارت بر ناشران در بازه زمانی ۱ الی ۴ مرداد ماه ۱۴۰۲ اقدام به برگزاری ۸ جلسه آموزشی در دو نوبت',
       button: 'پروژه ها',
-      titleSkill: 'مهارت ها',
+      titleSkill: 'مهارت های من',
       skills: [
         'Html',
         'Css',
@@ -89,7 +89,7 @@ export const persian = [
   ],
   [
     {
-      id: 'ajor',
+      id: '1',
       Link1: Ajorplushdash,
       Link2: Ajorplusphone,
       Link4: Ajorpluslogin,
@@ -108,6 +108,7 @@ export const persian = [
       links: [
         
       ],
+      HashLinks: '/project/#1',
       button: 'مشاهده توضیحات',
       titlePerview: 'AjorPlus توضیحات',
       video: AjorPlus,
@@ -135,7 +136,7 @@ export const persian = [
       ]
     },
     {
-      id: 'bodybiuld',
+      id: '2',
       Link1: imgLink1,
       Link2: imgLink2,
       Link3: imgLink3,
@@ -159,6 +160,7 @@ export const persian = [
           link: 'https://comfy-fenglisu-3f8324.netlify.app/',
         }
       ],
+      HashLinks: '/project/#2',
       button: 'مشاهده توضیحات',
       titlePerview: 'BodyBuild توضیحات',
       details: [
@@ -212,8 +214,8 @@ export const english = [
   ],
   [
     {
-      nameLeft: 'Hi, Im Saeed .',
-      nameRight: 'WebDeveloper',
+      nameLeft: ['H','i',',', 'I','m', 'S','a','e','e','d', '.'],
+      nameRight: ['W','e','b','D','e','v','e','l','o','p','e','r'],
       disTop: 'Im a Web Developer mainly Focused onFrontend (JavaScript)',
       disBottom: 'Take your Time to know Me Better',
       contact: 'Contact me'
@@ -263,7 +265,7 @@ export const english = [
   ],
   [
     {
-      id: 'ajor',
+      id: '1',
       Link1: Ajorplushdash,
       Link2: Ajorplusphone,
       Link4: Ajorpluslogin,
@@ -282,6 +284,7 @@ export const english = [
       links: [
         
       ],
+      HashLinks: '/project/#1',
       button: 'مشاهده توضیحات',
       titlePerview: 'AjorPlus توضیحات',
       video: AjorPlus,
@@ -309,6 +312,7 @@ export const english = [
       ]
     },
     {
+      id: '2',
       Link1: imgLink1,
       Link2: imgLink2,
       Link3: imgLink3,
@@ -333,6 +337,7 @@ export const english = [
           link: 'https://comfy-fenglisu-3f8324.netlify.app/',
         }
       ],
+      HashLinks: '/project/#2',
       button: 'Perview',
       titlePerview: 'BodyBuild.Perview',
       details: [

@@ -14,7 +14,6 @@ import { english } from '../../data'
 
 const HomeHeaderComponent = () => {
   const ui = useSelector((state) => state.ui)
-  console.log(ui.language)
 
   return (
     <section language={ui.language} className='HomeHeadersection'>
@@ -25,10 +24,25 @@ const HomeHeaderComponent = () => {
           .map((li) => {
             return (
               <>
-              <div className='HomeHeadertextContainer'>
+              <div key={li.language} className='HomeHeadertextContainer'>
                 <div className='HomeHeaderh1C'>
                   <div className='HomeHeadertitle'>
-                    <h1>{li.nameLeft}</h1> <h1>{li.nameRight}</h1> 
+                    <div className='h1Title'>
+                      {li.nameLeft.map((letter) => {
+                        return (
+                          <h1>{letter}</h1>
+                        )
+                      })
+                      }
+                    </div>
+                    <div className='h1Title'>
+                    {li.nameRight.map((letter, e) => {
+                        return (
+                          <h1>{letter}</h1>
+                        )
+                      })
+                      }
+                    </div>
                     <span></span>
                     <span></span>
                   </div>
@@ -62,9 +76,6 @@ const HomeHeaderComponent = () => {
                   </a>
                 </li>
               </ul>
-              <div className='HomeHeaderemailLink'>
-                <p>saeedm00014@gmail.com</p>
-              </div>
             </>
             )
           })}

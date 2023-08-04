@@ -1,5 +1,6 @@
 :root {
   --global-color-primary: #6ec1e4;
+  --global-color-primary-lowop: #6ec1e4b9;
   --global-color-secondary: #121f30;
   --global-color-lighter: #1e3553;
   --global-color-hover: #73d622;
@@ -12,12 +13,12 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
   color: rgb(255, 255, 255);
 }
 
 html,
 body {
+  font-family: iranyekan;
   overflow-x: hidden;
   background-color: var(--global-color-secondary);
 }
