@@ -14,6 +14,9 @@ import Header from './components/Header/header'
 import Footer from './components/Footer/footer'
 
 function App() {
+  const ui = useSelector((state) => state.ui)
+  console.log(ui.language)
+  localStorage.setItem('LanguageSaeedPortfolio' ,ui.language)
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
