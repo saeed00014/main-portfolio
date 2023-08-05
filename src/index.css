@@ -18,9 +18,9 @@ body {
 
 html,
 body {
-  font-family: iranyekan;
   overflow-x: hidden;
   background-color: var(--global-color-secondary);
+  font-family: iranyekan;
 }
 
 body {

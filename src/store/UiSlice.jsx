@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   language: localStorage.getItem('LanguageSaeedPortfolio') ?
     localStorage.getItem('LanguageSaeedPortfolio') : 'persian',
-  font: localStorage.getItem('LanguageSaeedPortfolio') ?
-   ((localStorage.getItem('LanguageSaeedPortfolio') == 'persian') ? 'iranyekan' : 'roboto') : 'persian'
+
+  font: (localStorage.getItem('LanguageSaeedPortfolio') == 'english') ? 'roboto' : 'iranyekan' 
 }
 
 const UiSlice = createSlice({

@@ -2,6 +2,7 @@ import './App.css'
 
 import { useEffect, useState } from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 import HomePage from './pages/HomePage/home'
 import LoadingPage from './pages/LoadingPage/loading'
