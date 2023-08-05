@@ -13,8 +13,7 @@
   align-items: center;
   width: 85%;
   max-width: 80rem;
-  height: 54rem;
-  padding-top: 4.5rem;
+  height: 90vh;
 }
 
 .HomeHeadercontent {
@@ -282,7 +281,7 @@
   }
 
   .HomeHeadersocialLink {
-    top: 6rem;
+    top: 0rem;
     bottom: 35rem;
   }
 
@@ -299,6 +298,10 @@
 } 
 
 @media only screen and (max-width: 640px) and (min-width: 480px) { 
+  .HomeHeadersection {
+    margin-top: -2rem;
+  }
+
   .HomeHeadercontainer {
     width: 90%;
   }
@@ -332,7 +335,7 @@
   }
 
   .HomeHeadersocialLink {
-    top: 6rem;
+    top: -1rem;
     bottom: 65vh;
   }
 
@@ -350,6 +353,10 @@
 }
 
 @media only screen and (max-width: 480px) and (min-width: 0) { 
+  .HomeHeadersection {
+    margin-top: -4rem;
+  }
+
   .HomeHeadercontainer {
     width: 95%;
   }
@@ -457,5 +464,9 @@
 
   .HomeHeaderemailLink {
     display: none;
+  }
+
+  .HomeHeaderspin {
+    transform: scale(.8);
   }
 }

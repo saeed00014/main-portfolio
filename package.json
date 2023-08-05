@@ -3,7 +3,6 @@
   "homepage": "https://saeedwebdev.ir",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -14,6 +13,7 @@
     "@reduxjs/toolkit": "^1.9.5",
     "country-flag-icons": "^1.5.7",
     "email-js": "^2.0.2",
+    "express": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",

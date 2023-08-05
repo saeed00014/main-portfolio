@@ -34,8 +34,8 @@ export const persian = [
   ],
   [
     {
-      nameRight: ['.هستم','سعید',',سلام'],
-      nameLeft: ['وب','نویس','برنامه'],
+      nameRight: [{name:'.هستم', id:'1'},{name:'سعید', id:'2'},{name:',سلام', id:'3'}],
+      nameLeft: [{name:'وب', id:'1'},{name:'نویس', id:'2'},{name:'برنامه', id:'3'}],
       disTop: 
       'من یک برنامه نویس وب هستم وب تمرکز اصلی ام بر فرانت اند هست',
       disBottom: 
@@ -214,8 +214,8 @@ export const english = [
   ],
   [
     {
-      nameLeft: ['H','i',',', 'I','m', 'S','a','e','e','d', '.'],
-      nameRight: ['W','e','b','D','e','v','e','l','o','p','e','r'],
+      nameLeft: [{name:'H', id:'1'},{name:'i', id:'2'},{name:',', id:'3'},{name:'I', id:'4'},{name:'m', id:'5'},{name:'S', id:'6'},{name:'a', id:'7'},{name:'e', id:'8'},{name:'e', id:'9'},{name:'d', id:'10'},{name:'.', id:'11'}],
+      nameRight: [{name:'W', id:'1'},{name:'e', id:'2'},{name:'b', id:'3'},{name:'D', id:'4'},{name:'e', id:'5'},{name:'v', id:'6'},{name:'e', id:'7'},{name:'l', id:'8'},{name:'o', id:'9'},{name:'p', id:'10'},{name:'e', id:'11'},{name:'r', id:'12'}],
       disTop: 'Im a Web Developer mainly Focused onFrontend (JavaScript)',
       disBottom: 'Take your Time to know Me Better',
       contact: 'Contact me'

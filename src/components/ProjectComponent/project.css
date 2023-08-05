@@ -152,6 +152,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  padding-top: 2rem;
 }
 
 .Projectcontainer[language='persian'] .ProjectperviewTitle {

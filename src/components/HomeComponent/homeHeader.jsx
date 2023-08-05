@@ -18,27 +18,26 @@ const HomeHeaderComponent = () => {
   return (
     <section language={ui.language} className='HomeHeadersection'>
       <div className='HomeHeadercontainer'>
-        <div className='HomeHeadercontent'>
           {(ui.language == 'persian' ?
           persian[1] : english[1])
           .map((li) => {
             return (
-              <>
-              <div key={li.language} className='HomeHeadertextContainer'>
+            <div key={li.disTop} className='HomeHeadercontent'>
+              <div className='HomeHeadertextContainer'>
                 <div className='HomeHeaderh1C'>
                   <div className='HomeHeadertitle'>
                     <div className='h1Title'>
                       {li.nameLeft.map((letter) => {
                         return (
-                          <h1>{letter}</h1>
+                          <h1 key={letter.id}>{letter.name}</h1>
                         )
                       })
                       }
                     </div>
                     <div className='h1Title'>
-                    {li.nameRight.map((letter, e) => {
+                    {li.nameRight.map((letter) => {
                         return (
-                          <h1>{letter}</h1>
+                          <h1 key={letter.id}>{letter.name}</h1>
                         )
                       })
                       }
@@ -76,10 +75,9 @@ const HomeHeaderComponent = () => {
                   </a>
                 </li>
               </ul>
-            </>
+            </div>
             )
           })}
-        </div>
         <HashLink to='/#about' className='HomeHeaderspin'>
           <span></span>
           <span></span>
