@@ -31,19 +31,20 @@ const HomeHeaderComponent = () => {
                         return (
                           <h1 key={letter.id}>{letter.name}</h1>
                         )
-                      })
-                      }
+                      })}
+                      <span></span>
+                      <span></span>
                     </div>
                     <div className='h1Title'>
                     {li.nameRight.map((letter) => {
-                        return (
-                          <h1 key={letter.id}>{letter.name}</h1>
+                      return (
+                        <h1 key={letter.id}>{letter.name}</h1>
                         )
                       })
-                      }
+                    }
+                    <span></span>
+                    <span></span>
                     </div>
-                    <span></span>
-                    <span></span>
                   </div>
                 </div>
                 <div className='HomeHeaderpC'>

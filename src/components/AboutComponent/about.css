@@ -271,7 +271,6 @@
   
   .AboutContainer[language='persian'] .Aboutcontent {
     flex-direction: column;
-    gap: 1.5rem;
   }
 
   .Abouttitle {
@@ -301,11 +300,14 @@
   }
 
   .AboutaboutLeft h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .AboutaboutLeft a {
     margin-top: 1rem;
+    width: 10rem;
+    font-size: 1rem;
+    height: 2.6rem;
   }
   
   .AboutaboutRight {
@@ -317,7 +319,7 @@
   }
   
   .AboutaboutRight h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .AboutlearningMore {

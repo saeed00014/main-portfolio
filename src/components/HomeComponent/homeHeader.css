@@ -355,6 +355,7 @@
 @media only screen and (max-width: 480px) and (min-width: 0) { 
   .HomeHeadersection {
     margin-top: -4rem;
+    margin-bottom: -2rem;
   }
 
   .HomeHeadercontainer {
@@ -372,12 +373,6 @@
   .HomeHeadersection[language='persian'] .HomeHeadertextContainer {
     gap: .5rem;
   }
-
-  .HomeHeaderh1C {
-    width: 100%;
-    height: max-content;
-    max-height: 6rem;
-  }
   
   .HomeHeadertitle {
     position: relative;
@@ -389,7 +384,18 @@
     flex-direction: column-reverse;
   }
   
-  .HomeHeadertitle span:nth-child(3) {
+  
+  @keyframes headerH1csmallspan {
+    from {
+      bottom: -1%;
+    }
+    
+    to {
+      
+    }
+  }
+  
+  .h1Title:nth-child(1) span {
     position: absolute;
     width: 100%;
     height: .01rem;
@@ -397,59 +403,119 @@
     left: 0;
     width: 35%;
     background-color: var(--global-color-primary);
+    animation: .8s ease-in-out headerH1csmallspan forwards;
   }
-
-  .HomeHeadersection[language='persian'] .HomeHeadertitle span:nth-child(3) {
+  
+  .HomeHeadersection[language='persian'] .h1Title:nth-child(1) span {
     bottom: initial;
-    top: 25%;
+    top: initial;
+    bottom: 75%;
+    animation: .8s ease-in-out headerH1csmallspan forwards;
   }
-
-  .HomeHeadertitle span:nth-child(4) {
+  
+  .h1Title:nth-child(2) span {
     position: absolute;
     width: 100%;
     height: .01rem;
-    top: 25%;
+    bottom: 75%;
     right: 0;
     width: 35%;
     background-color: var(--global-color-primary);
+    animation: .8s ease-in-out headerH1csmallspan forwards;
   }
   
-  .HomeHeadersection[language='persian'] .HomeHeadertitle span:nth-child(4) {
+  .HomeHeadersection[language='persian'] .h1Title:nth-child(2) span {
     bottom: initial;
     top: initial;
     bottom: 25%;
     width: 40%;
+    animation: .8s ease-in-out headerH1csmallspan forwards;
+  }
+  
+  @keyframes h1TitleSmallH1English {
+    from {
+      margin-top: 8.5rem;
+    }
+    
+    to {
+       margin-top: 0;
+      }
+  }
+  
+  @keyframes h1TitleSmallH1Persian {
+    from {
+      margin-top: 6rem;
+    }
+    
+    to {
+      margin-top: 0;
+    }
   }
 
+  @keyframes h1TitleSmallPCEnglish {
+    from {
+      margin-top: 1.5rem;
+    }
+    
+    to {
+       margin-top: 0;
+      }
+  }
+  
+  @keyframes h1TitleSmallPCPersian {
+    from {
+      margin-top: 1rem;
+    }
+    
+    to {
+      margin-top: 0;
+    }
+  }
+  
   .h1Title h1 {
     font-size: clamp(1rem, 8.8vw, 2.5rem);
+    animation: 1s ease-in-out h1TitleSmallH1English forwards;
   }
-
-  .HomeHeadersection[language='persian'] h1 {
-    font-size: clamp(1rem, 6.9vw, 2.7rem);
+  
+  .HomeHeadersection[language='persian'] .h1Title h1 {
+    font-size: clamp(1rem, 6.8vw, 2.5rem);
+    animation: .8s ease-in-out h1TitleSmallH1Persian forwards;
   }
-
+  
   .HomeHeadersection[language='persian'] p {
-    font-size: clamp(.5rem, 3vw, 1.2rem);
-  }
-
-  .HomeHeaderpC {
+    font-size: clamp(.5rem, 4vw, 1.4rem);
     width: 100%;
     height: max-content;
+    text-align: center;
+  }
+  
+  .HomeHeadersection[language='persian'] .HomeHeaderpC {
+    height: min-content;
+    max-height: 3rem;
+    animation: .8s ease-in-out h1TitleSmallPCPersian forwards;
+  }
+  
+  .HomeHeaderh1C {
+    width: 100%;
+    height: max-content;
+    max-height: 6rem;
+  }
+  
+  .HomeHeaderpC {
+    height: min-content;
+    max-height: 2.3rem;
+    animation: 1s ease-in-out h1TitleSmallPCEnglish forwards;
   }
 
   .HomeHeaderpC p {
-    font-size: clamp(0rem, 3.3vw, .99rem);
-  }
-
-  .HomeHeadersection[language='persian'] .HomeHeaderpC {
-    height: 1.4rem;
+    text-align: center;
+    font-size: clamp(0rem, 4vw, 1.5rem);
   }
 
   .HomeHeadercontactLink {
     margin-top: 1rem;
-    width: 8rem;
-    height: 2.3rem;
+    width: 10rem;
+    height: 2.6rem;
     font-size: .85rem;
   }
 
@@ -467,6 +533,7 @@
   }
 
   .HomeHeaderspin {
+    bottom: 2rem;
     transform: scale(.8);
   }
 }

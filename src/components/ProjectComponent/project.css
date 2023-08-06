@@ -368,6 +368,10 @@
 }
 
 @media only screen and (max-width: 480px) and (min-width: 0) { 
+  .Projectcontainer {
+    gap: 3rem;
+  }
+
   .Projectcontent {
     width: 95%;
   }

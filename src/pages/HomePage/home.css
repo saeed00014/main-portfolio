@@ -66,19 +66,22 @@
 @media only screen and (max-width: 480px) and (min-width: 0) { 
   .Homep {
     gap: 2rem;
+    padding-top: 4rem;
   }
 
   .HomepTitlec {
     width: 95%;
   }
+
   .HomepTitle {
-    font-size: 1.5rem;
+    font-size: 2rem;
     width: 100%;
     max-width: 70rem;
   }
 
   .HomepDis {
-    font-size: clamp(.5rem, 4.3vw, 1.2rem);
+    text-align: center;
+    font-size: clamp(.5rem, 5.8vw, 1.3rem);
     width: 100%;
     max-width: 70rem;
   }
