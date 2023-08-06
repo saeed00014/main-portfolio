@@ -29,7 +29,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
 }
 
 .HomepTitle {
@@ -43,21 +44,31 @@
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 640px) {
+  .HomepTitle {
+
+  }
+
+  .HomepDis {
+
+  }
 
 } 
 
 @media only screen and (max-width: 640px) and (min-width: 480px) {
+  .Homep {
+    padding-top: 5.5rem;
+  }
   .HomepTitlec {
     width: 90%;
   }
   .HomepTitle {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     width: 100%;
     max-width: 70rem;
   }
 
   .HomepDis {
-    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-size: 1.6rem;
     width: 100%;
     max-width: 70rem;
   }

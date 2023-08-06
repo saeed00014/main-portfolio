@@ -46,6 +46,7 @@
   color: red;
   padding: -.8rem 0 !important;
   font-size: .8rem;
+  text-align: center;
 }
 
 .FormContainer form input,
@@ -112,7 +113,7 @@
   .FormContainer form input,
   .FormContainer form textarea,
   .FormContainer form label {
-    width: 95%;
+    width: 90%;
     max-width: 20rem;
   }
 }

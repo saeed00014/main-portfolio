@@ -376,6 +376,11 @@ transition: all .3s ease;
     background-color: var(--global-color-secondary);
     max-width: initial;
   }
+
+  
+  .Headernavlink li {
+    width: 100%;
+  }
   
   .Headernavlink li:nth-child(1) {
     display: none;
@@ -383,6 +388,14 @@ transition: all .3s ease;
 
   .Headernavlink li a {
     font-size: 1.8rem;
+  }
+
+  .Headernavlink li a::after {
+    display: none;
+  }
+
+  .Headernavlink li:hover {
+    background: linear-gradient(to right, var(--global-color-secondary) 25%, var(--global-color-primary-lowop) , var(--global-color-secondary) 75%);
   }
 
   .Headernavlink[hamb-state='false'] {

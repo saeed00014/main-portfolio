@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
+  padding-top: 2rem;
 }
 
 .Projectsection h1 {
@@ -14,7 +15,7 @@
   width: 80%;
   font-size: 2.5rem;
   max-width: 75rem;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 
 .Projectsection[language='persian'] h1 {
@@ -37,13 +38,17 @@
 
 @media only screen and (max-width: 480px) and (min-width: 0) { 
   .Projectsection {
-    padding-top: 6rem;
+    padding-top: 0rem;
   }
 
   .Projectsection h1 {
-    font-size: 1.5rem;
+    font-size: 2.6rem;
     width: 95%;
     max-width: 70rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .Projectsection[language = 'persian'] h1 {
+    font-size: 2rem;
   }
 }

@@ -355,7 +355,7 @@
 @media only screen and (max-width: 480px) and (min-width: 0) { 
   .HomeHeadersection {
     margin-top: -4rem;
-    margin-bottom: -2rem;
+    margin-bottom: 0rem;
   }
 
   .HomeHeadercontainer {

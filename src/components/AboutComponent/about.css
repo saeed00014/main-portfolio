@@ -59,13 +59,13 @@
 }
 
 .AboutaboutLeft h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 0;
   margin-bottom: 1rem;
 }
 
 .AboutaboutLeft p {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   margin: 0;
 }
 
@@ -195,6 +195,11 @@
     max-width: initial;
   }
   
+
+  .AboutaboutLeft h1 {
+    font-size: 2.5rem;
+  }
+  
   .AboutaboutRight {
     width: 100%;
     max-width: initial;
@@ -202,6 +207,7 @@
 
   .AboutaboutRight h1 {
     padding-left: 0;
+    font-size: 2.5rem;
   }
 } 
 
@@ -220,7 +226,6 @@
 
   .AboutContainer[language='persian'] .Aboutcontent {
     flex-direction: column;
-    gap: 1.5rem;
   }
 
   .AboutaboutLeft {
@@ -229,11 +234,12 @@
   }
 
   .AboutaboutLeft h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .AboutaboutLeft a {
     margin-top: 1rem;
+    width: 11rem;
   }
   
   .AboutaboutRight {
@@ -241,11 +247,9 @@
     max-width: initial;
   }
 
-    
   .AboutaboutRight h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
-
 
   .AboutaboutRight h1 {
     padding-left: 0;

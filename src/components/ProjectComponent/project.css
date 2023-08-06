@@ -317,6 +317,7 @@
 @media only screen and (max-width: 640px) and (min-width: 480px) {
   .Projectcontent {
     width: 90%;
+    gap: 2.5rem;
   }
 
   .ProjectprojectItself {
@@ -341,6 +342,10 @@
 
   .Projectphone {
     display: none;
+  }
+
+  .ProjectperviewTitle {
+    padding-top: 0;
   }
 
   .ProjectvisitSite {
@@ -374,6 +379,7 @@
 
   .Projectcontent {
     width: 95%;
+    gap: 2rem;
   }
 
   .ProjectprojectItself {
@@ -445,7 +451,11 @@
   }
   
   .ProjectprojectLink a {
-    font-size: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .Projectcontainer[language='persian'] .ProjectprojectLink a {
+    font-size: 1.1rem;
   }
 
   .Projectdetails {
@@ -460,6 +470,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    padding-top: 0;
   }
 
   .ProjectperviewTitle h2 {
