@@ -272,9 +272,9 @@ export const english = [
       Link3: Ajorplusdata,
       Link5: Ajorplususer,
       Link5: Ajorplusqomer,
-      title: 'آجر پلاس',
+      title: 'AjorPlus',
       dis:
-      'این یک پروژه خوصوصیه که تازه تمومش کردم یک کارخونه آجره که تعدادی کوره داره و هر کوره که قابلیت تغییر اطلاعات اضافه و حذف اطلاعات اضافه کردن کاربر با سطح دسترسی لاگین و... رو داره',
+      'This is my newest project a private website its a brick factory witch has some forges and we are able to edit our forges delete or add more mouths for those. you can also make users for login and access',
       skills: [
         'ReactJs',
         'ReduxToolkit',
@@ -285,29 +285,29 @@ export const english = [
         
       ],
       HashLinks: '/project/#1',
-      button: 'مشاهده توضیحات',
-      titlePerview: 'AjorPlus توضیحات',
+      button: 'Perview',
+      titlePerview: 'AjorPlus.Perview ',
       video: AjorPlus,
       details: [
         {
           link: Ajorpluslogin,
-          name: 'ورود',
-          dis: 'ورود با اطلاعات حساب کاربری'
+          name: 'Sign in',
+          dis: 'Sign in with your username and password'
         },
         {
           link: Ajorplushdash,
-          name: 'داشبورد',
-          dis: ' اطلاعات کلی از کوره ها و وضعیت دهانه ها شون ( وضعیت پخت آجر ها و آجرهای داخل هر دهانه ) رو به همراه نمودار نشون میده'
+          name: 'Dashboard',
+          dis: 'Shows overall info of forges and mouths condition (state, type and ...) with charts'
         },
         {
           link: Ajorplusdata,
-          name: 'داده ها و اطلاعات',
-          dis: 'همه داده های موجود رو دسته بندی میکنه که قابلیت جستجو دسته بندی بر اساس وضعیت و امکان نشان دار کردن داده ها بعلاوه تعریف و حذف داده رو داره'
+          name: 'Data and Information',
+          dis:  'groups all the available Data you can search for a spacific data and its possible to mark add and delete data'
         },
         {
           link: Ajorplususer,
-          name: 'مدیریت دسترسی و کاربران',
-          dis: 'کاربران تعریف شده رو نمایش میده امکان تعریف کاربر حذف کاربر و تغییر اطلاعات کاربران و تعیین سطح دسترسی برای هر کاربر رو داره'
+          name: 'Manage Users and Access level',
+          dis: 'it Shows all made users so you can add delete or edit any user and also manage their access level'
         }
       ]
     },

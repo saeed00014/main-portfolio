@@ -35,17 +35,18 @@ const ContactComponent = ({homeedition}) => {
   }, [alert])
 
   const onBlur = (e) => {
-    if(e.target.name == 'message' && e.target.value == '') {
+    console.log(e.target.value.length)
+    if(e.target.name == 'message' && e.target.value.length < 9) {
       setError2(true)
-    }else if (e.target.name == 'user_email' && e.target.value == '') {
+    }else if (e.target.name == 'user_email' && e.target.value.length < 3) {
       setError1(true)
-    }else if (e.target.name == 'user_name' && e.target.value == '') {
+    }else if (e.target.name == 'user_name' && e.target.value.length < 3) {
       setError(true)
-    }if(e.target.name == 'message' && e.target.value != '') {
+    }if(e.target.name == 'message' && e.target.value.length >= 9) {
       setError2(false)
-    }else if (e.target.name == 'user_email' && e.target.value != '') {
+    }else if (e.target.name == 'user_email' && e.target.value.length >= 3) {
       setError1(false)
-    }else if (e.target.name == 'user_name' && e.target.value != '') {
+    }else if (e.target.name == 'user_name' && e.target.value.length >= 3) {
       setError(false)
     }
   }
