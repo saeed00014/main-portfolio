@@ -34,17 +34,18 @@ const ContactComponent = ({homeedition}) => {
     }, 2000)
   }, [alert])
 
-  const onBlur = (e) => {
-    console.log(e.target.value.length)
+  const onChange = (e) => {
+    const ats = '@'
+    console.log(e.target.value.includes(ats))
     if(e.target.name == 'message' && e.target.value.length < 9) {
       setError2(true)
-    }else if (e.target.name == 'user_email' && e.target.value.length < 3) {
+    }else if (e.target.name == 'user_email' && !e.target.value.includes('@') && e.target.value.length < 3) {
       setError1(true)
-    }else if (e.target.name == 'user_name' && e.target.value.length < 3) {
+    }else if (e.target.name == 'user_name' && e.target.value.length < 3 ) {
       setError(true)
     }if(e.target.name == 'message' && e.target.value.length >= 9) {
       setError2(false)
-    }else if (e.target.name == 'user_email' && e.target.value.length >= 3) {
+    }else if (e.target.name == 'user_email' && e.target.value.includes('@') && e.target.value.length >= 3) {
       setError1(false)
     }else if (e.target.name == 'user_name' && e.target.value.length >= 3) {
       setError(false)
@@ -66,7 +67,7 @@ const ContactComponent = ({homeedition}) => {
               }
               <label>{li.name}</label>
               <input 
-                onBlur={(e) => onBlur(e)}
+                onChange={(e) => onChange(e)}
                 style={{fontFamily: ui.font}}
                 type="text" 
                 name="user_name" 
@@ -76,7 +77,7 @@ const ContactComponent = ({homeedition}) => {
                   ? 'باید بین 3 تا 12 حرف باشد' : 'must contain 3-12 characters'}</p>}
               <label>{li.email}</label>
               <input 
-                onBlur={(e) => onBlur(e)}
+                onChange={(e) => onChange(e)}
                 style={{fontFamily: ui.font}} 
                 type="email" 
                 name="user_email"
@@ -85,7 +86,7 @@ const ContactComponent = ({homeedition}) => {
                 ? 'ایمیل موجود نیست' : 'not valid email'}</p>}
               <label>{li.message}</label>
               <textarea 
-                onBlur={(e) => onBlur(e)}
+                onChange={(e) => onChange(e)}
                 style={{fontFamily: ui.font}} 
                 type='text' 
                 name="message" 
