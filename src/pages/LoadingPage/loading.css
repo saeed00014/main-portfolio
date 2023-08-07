@@ -52,17 +52,6 @@
     box-shadow: -2px -9.7rem 80px var(--global-color-primary);
   }
 }
-
-.loadingline {
-  position: absolute;
-  left: -8rem;
-  width: 0rem;
-  bottom: -2rem;
-  height: .2rem;
-  background-color: var(--global-color-primary);
-  animation: 1s alternate loadingLine forwards;
-  border-radius: 3rem;
-}
 @keyframes loadingLine {
  from {
     width: 0rem;
@@ -71,6 +60,18 @@
  100%{
     width: 21.1rem;
   }
+}
+
+.loadingline {
+  position: absolute;
+  left: -8rem;
+  width: 0rem;
+  bottom: -2rem;
+  height: .2rem;
+  background-color: var(--global-color-primary);
+  animation: 1.1s alternate loadingLine forwards;
+  animation-delay: .3s;
+  border-radius: 3rem;
 }
 
 @media only screen and (max-width: 480px) and (min-width: 0) {
