@@ -1,0 +1,18 @@
+@keyframes loading {
+  1% {
+    
+  }
+
+  99% {
+    transform: rotate(360deg);
+  }
+}
+
+.SideLoadingContainer span {
+  width: 2rem;
+  height: 2rem;
+  border: .1rem solid transparent;
+  border-top: .1rem solid white;
+  border-radius: 50%;
+  animation: 1.5s infinite loading;
+}

@@ -217,22 +217,6 @@
   font-size: 1.3rem;
 }
 
-.ProjectpartOne img:hover {
-  /*transform: rotate3d(3, -1, 0, 30deg);
-  transition: all .7s ease;
-  animation: 1s alternate projectOne forwards .4s,
-   1s alternate projectOne1 forwards .6s,
-   .8s alternate projectOne2 forwards .8s;*/
-}
-
-.ProjectpartOne2 img:hover {
-  /*transform: rotate3d(3, -1, 0, 30deg);
-  transition: all .7s ease;
-  animation: 1s alternate projectOne forwards .4s,
-   1s alternate projectOne1 forwards .6s,
-   .8s alternate projectOne2 forwards .8s;*/
-}
-
 @keyframes projectOne {
   form {
     scale: 1;

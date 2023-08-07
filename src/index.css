@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'iranyekan';
+  src: url('./fonts/iranyekan.woff');
+}
+@font-face {
+  font-family: 'DancingScript';
+  src: url('./fonts/DancingScript.ttf');
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto.ttf');
+}
+
 :root {
   --global-color-primary: #6ec1e4;
   --global-color-primary-lowop: #6ec1e4b9;
@@ -25,17 +38,4 @@ body {
 
 body {
   padding-top: 6rem;
-}
-
-@font-face {
-  font-family: 'iranyekan';
-  src: url('./fonts/iranyekan.woff');
-}
-@font-face {
-  font-family: 'DancingScript';
-  src: url('./fonts/DancingScript.ttf');
-}
-@font-face {
-  font-family: 'Roboto';
-  src: url('./fonts/Roboto.ttf');
 }
