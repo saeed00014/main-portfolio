@@ -11,6 +11,7 @@
 
 .resumeImg *:nth-child(1) {
   position: absolute;
+  margin-bottom: 2rem;
 }
 
 .resumeImg img {
