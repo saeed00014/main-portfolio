@@ -35,7 +35,7 @@ const ResumePage = () => {
   useEffect(() => {
     setTimeout(() => {
       setAlert(false)
-    }, 3000) 
+    }, 2500) 
   }, [alert])
 
   return (

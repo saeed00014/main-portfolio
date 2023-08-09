@@ -16,8 +16,8 @@ const AlertComponent = ({result}) => {
             <span></span>
             <span></span>
           </div>
-          {ui.language == 'persian' ? <p>پیام شما با موفقیت ارسال شد</p>
-          : <p>Your Massage has been Successfuly Sent</p>
+          {ui.language == 'persian' ? <p> عملیات با موفقیت انجام شد</p>
+          : <p>process done successfuly</p>
           }
         </div>
       </div>
@@ -30,8 +30,8 @@ const AlertComponent = ({result}) => {
             <span></span>
             <span></span>
           </div>
-          {ui.language == 'persian' ? <p>پیام شماارسال نشد</p>
-          : <p>Your Massage has not been Sent</p>
+          {ui.language == 'persian' ? <p> عملیات انجام نشد</p>
+          : <p>process failed</p>
           }
         </div>
       </div>

@@ -37,7 +37,7 @@ export const persian = [
       nameRight: [{name:'.هستم', id:'1'},{name:'سعید', id:'2'},{name:',سلام', id:'3'}],
       nameLeft: [{name:'وب', id:'1'},{name:'نویس', id:'2'},{name:'برنامه', id:'3'}],
       disTop: 
-      'من یک برنامه نویس وب هستم وب تمرکز اصلی ام بر فرانت اند هست',
+      'من یک برنامه نویس وب هستم و تمرکز اصلی ام بر فرانت اند هست',
       disBottom: 
       'پورتفولیوی من رو برسی کنید تا من رو بیشتر بشناسید',
       contact: '  ارتباط با من'
@@ -225,7 +225,7 @@ export const english = [
     {
       title: 'Resume.',
       dis: 'download Resume',
-      link: "./src/resume/englishres.pdf"
+      link: "/src/resume/englishres.pdf"
     }
   ],
   [

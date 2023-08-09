@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   z-index: 200;
-  background-color: rgba(128, 128, 128, 0.418);
+  background-color: var(--global-color-background);
   width: 100vw;
   height: 100vh;
   bottom: 0;
