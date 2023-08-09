@@ -9,6 +9,7 @@ const AlertComponent = ({result}) => {
   return (
     <>
       {text && 
+      <div className='AlertContainer'>
         <div className='AlertOKcontainer'>
           <div>
             <span></span>
@@ -19,8 +20,10 @@ const AlertComponent = ({result}) => {
           : <p>Your Massage has been Successfuly Sent</p>
           }
         </div>
+      </div>
       }
       {!text && 
+      <div className="AlertContainer">
         <div className='AlertFailedcontainer'>
           <div>
             <span></span>
@@ -31,6 +34,7 @@ const AlertComponent = ({result}) => {
           : <p>Your Massage has not been Sent</p>
           }
         </div>
+      </div>
       }
     </>
   )

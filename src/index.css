@@ -18,6 +18,7 @@
   --global-color-lighter: #1e3553;
   --global-color-hover: #73d622;
   --global-color-ReallyLight: rgb(104, 206, 206);
+  --global-color-background: rgba(29, 29, 29, 0.445);
 }
 
 *,

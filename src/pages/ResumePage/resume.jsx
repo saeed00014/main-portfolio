@@ -20,14 +20,13 @@ const ResumePage = () => {
 
   const handleSideLoading = (link) => {
     setLoading(true)
-    axios.post(link, 
-  )
+    axios.get(link, )
     .then(() => {
+      console.log('f')
       setLoading(false)
-      setAlert(true)
     }, () => {
+      console.log('f')
       setLoading(false)
-      setAlert(false)
     });
   }
 
@@ -35,7 +34,7 @@ const ResumePage = () => {
     setTimeout(() => {
       setAlert(false)
     }, 2000) 
-  }, [alert])
+  }, [])
 
   return (
     <section language={ui.language} style={{fontFamily: styles}} className='Resumesection'>
@@ -47,9 +46,9 @@ const ResumePage = () => {
               <h1>{li.title}</h1>
               <ResumeComponent />
               <div>
-                <button onClick={() => handleSideLoading(li.link)}>
+                <a href={li.link} download onClick={() => handleSideLoading(li.link)}>
                   {loading && <SideLoadingCommponent />}{li.dis}
-                </button>
+                </a>
               </div>
             </div>  
           )
