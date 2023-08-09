@@ -16,6 +16,10 @@
   width: 100%;
 }
 
+.Resumehead *:nth-child(2) {
+  position: fixed;
+}
+
 .Resumehead h1 {
   font-size: 2.5rem;
   width: 70%;
