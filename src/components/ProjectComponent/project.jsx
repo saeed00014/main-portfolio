@@ -98,7 +98,11 @@ const ProjectComponent = ({homeedition}) => {
                           <p>{details.dis}</p>
                         </div>
                         <div onClick={() => handleImg(details.link)} className='ProjectpartOneImg'>
-                          <SideLoadingCommponent />
+                          {sideLoad && 
+                          <div className="sideLoadContainer">
+                            <SideLoadingCommponent />
+                          </div>
+                          }
                           <img src={details.link} alt="" />
                         </div>
                       </div>
