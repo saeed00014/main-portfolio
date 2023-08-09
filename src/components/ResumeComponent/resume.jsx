@@ -6,6 +6,8 @@ import persian from '../../images/perres.png'
 import english from '../../images/engres.png'
 import { useSelector } from 'react-redux'
 
+import SideLoadingCommponent from '../SideLoadingCommponent/loading'
+
 const ResumeComponent = () => {
   const ui = useSelector((state) => state.ui)
 

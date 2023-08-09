@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux'
 import axios from 'axios'
 
 import ResumeComponent from '../../components/ResumeComponent/resume'
-import SideLoadingCommponent from '../../components/SideLoadingCommponent/loading'
 import AlertComponent from '../../components/AlertComponent/alert'
 
 import { english } from '../../data'
