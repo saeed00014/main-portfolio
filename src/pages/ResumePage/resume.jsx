@@ -35,8 +35,8 @@ const ResumePage = () => {
   useEffect(() => {
     setTimeout(() => {
       setAlert(false)
-    }, 2000) 
-  }, [])
+    }, 3000) 
+  }, [alert])
 
   return (
     <section language={ui.language} style={{fontFamily: styles}} className='Resumesection'>
