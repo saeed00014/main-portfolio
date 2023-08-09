@@ -7,9 +7,12 @@ import { useSelector } from 'react-redux';
 import { persian } from '../../data';
 import { english } from '../../data';
 import AlertComponent from '../AlertComponent/alert';
+import SideLoadingCommponent from '../SideLoadingCommponent/loading';
 
 const ContactComponent = ({homeedition}) => {
   const [alert, setAlert] = useState('')
+  const [loading, setLoading] = useState('')
+
   const ui = useSelector((state) => state.ui)
   const form = useRef();
 
@@ -19,19 +22,22 @@ const ContactComponent = ({homeedition}) => {
 
   const sendEmail = async (e) => {
     e.preventDefault();
+    setLoading(true)
     
     emailjs.sendForm('service_h32hvev', 'template_qe6dp0i', form.current, 'JcRK8-MYkgHcGvr_7')
     .then((result) => {
       setAlert(result)
+      setLoading(false)
     }, (error) => {
       setAlert(error)
+      setLoading(false)
     });
   }
 
   useEffect(() => {
     setTimeout(() => {
       setAlert('')
-    }, 2000)
+    }, 2500)
   }, [alert])
 
   const onChange = (e) => {
@@ -94,11 +100,18 @@ const ContactComponent = ({homeedition}) => {
                 required= {true}/>
                 {error2 && <p>{ui.language == 'persian' 
                   ? 'باید بین 9 تا 212 حرف باشد' : 'must contain 9-212 characters'}</p>}
-              <input style={{fontFamily: ui.font}} type="submit" value={li.submit} />
+                <div>
+                  {loading && 
+                    <span>
+                      <SideLoadingCommponent  />
+                    </span>
+                  }
+                  <input style={{fontFamily: ui.font}} type="submit" value={li.submit} />
+                </div>
             </form>
           )
         })}
-        {alert && <AlertComponent result={alert} content='contact' />}
+        {alert && <AlertComponent result={alert.text} content='contact' />}
     </div>
   )
 }

@@ -20,6 +20,17 @@
   border-radius: 1rem;
 }
 
+.FormContainer form div {
+  display: flex;
+  position: relative;
+}
+
+.FormContainer form div span {
+  position: absolute;
+  left: 20%;
+  top: .75rem;
+}
+
 .FormContainer form[homeedition = false] {
   margin-top: 4rem;
 }
