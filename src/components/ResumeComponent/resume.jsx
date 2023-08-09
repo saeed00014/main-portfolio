@@ -11,6 +11,7 @@ const ResumeComponent = () => {
 
   return (
     <div language={ui.language} className='resumeImg'>
+      <SideLoadingCommponent />
       {ui.language == 'persian' ? 
       <img src={persian} alt='persian resume' />
       : <img src={english} alt='english resume' />

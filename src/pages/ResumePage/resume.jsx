@@ -46,7 +46,6 @@ const ResumePage = () => {
           return (
             <div key={li.title} className='Resumehead'>
               <h1>{li.title}</h1>
-              <SideLoadingCommponent />
               <ResumeComponent />
               <div>
                 <a href={li.link} download onClick={() => handleSideLoading(li.link)}>

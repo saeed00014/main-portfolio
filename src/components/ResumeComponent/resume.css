@@ -1,4 +1,5 @@
 .resumeImg {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,6 +7,10 @@
   width: 75%;
   max-width: 30rem;
   height: min-content;
+}
+
+.resumeImg *:nth-child(1) {
+  position: absolute;
 }
 
 .resumeImg img {
