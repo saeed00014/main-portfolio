@@ -3,9 +3,9 @@ import './alert.css'
 import React from 'react'
 import { useSelector } from 'react-redux'
 
-const AlertComponent = ({result, content}) => {
+const AlertComponent = ({result}) => {
   const ui = useSelector((state) => state.ui)
-  const text = result.text
+  const text = result
   return (
     <>
       {text && 

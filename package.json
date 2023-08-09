@@ -11,6 +11,8 @@
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
     "country-flag-icons": "^1.5.7",
     "email-js": "^2.0.2",
     "express": "^4.18.2",

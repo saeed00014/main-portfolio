@@ -9,10 +9,10 @@
 }
 
 .SideLoadingContainer span {
-  width: 2rem;
-  height: 2rem;
-  border: .1rem solid transparent;
-  border-top: .1rem solid white;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: .2rem solid transparent;
+  border-top: .2rem solid white;
   border-radius: 50%;
-  animation: 1.5s infinite loading;
+  animation: 1.2s infinite loading;
 }

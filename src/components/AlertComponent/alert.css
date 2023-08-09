@@ -8,6 +8,7 @@
   background-color: white;
   border-radius: .8rem;
   overflow: hidden;
+  border: .1rem solid black;
 }
 
 .AlertOKcontainer p,
@@ -149,10 +150,6 @@
   top: 2.1rem;
   border-radius: 100%;
   border: 3px solid red;
-}
-
-.AlertFailedcontainer span:nth-child(1)::after {
-
 }
 
 .AlertFailedcontainer span:nth-child(2) {

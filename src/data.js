@@ -47,7 +47,7 @@ export const persian = [
     {
       title: 'رزومه',
       dis: 'دانلود رزومه',
-      link: "https://cvbuilder.me/Builder/Pdf/fa/template34/0e72f72f-53d1-425e-a4b6-ae1e5d495aa0/MyResume-15[www.cvbuilder.me]235.pdf"
+      link: "./src/resume/persianres.pdf"
     }
   ],
   [
@@ -224,8 +224,8 @@ export const english = [
   [
     {
       title: 'Resume.',
-      dis: 'download English Resume',
-      link: "https://cvbuilder.me/Builder/Pdf/en/template34/60bfaf67-8eda-43bc-b668-185e77348195/MyResume-559[www.cvbuilder.me]706.pdf"
+      dis: 'download Resume',
+      link: "./src/resume/englishres.pdf"
     }
   ],
   [

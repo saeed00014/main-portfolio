@@ -31,15 +31,17 @@
 
 .Aboutcontent {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   width: 80%;
+  gap: 4rem 0;
   max-width: 70rem;
   overflow-y: initial;
 }
 
 .AboutContainer[language='persian'] .Aboutcontent {
-  flex-direction: row-reverse;
+  flex-direction: column;
 }
 
 .AboutaboutLeft {
@@ -47,8 +49,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 43%;
-  max-width: 30rem;
+  width: 100%;
+  max-width: 75rem;
   gap: .8rem;
 }
 
@@ -74,7 +76,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 12rem;
   height: 3rem;
   font-size: 1.2rem;
@@ -128,8 +130,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 47%;
-  max-width: 31rem;
+  width: 100%;
+  max-width: 75rem;
 }
 
 .AboutContainer[language='persian'] .AboutaboutRight {

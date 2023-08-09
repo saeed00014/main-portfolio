@@ -5,7 +5,7 @@ import React from 'react'
 const SideLoadingCommponent = () => {
   return (
     <div className='SideLoadingContainer'>
-      <p><span></span> Loading</p> 
+      <p><span></span></p> 
     </div>
   )
 }
