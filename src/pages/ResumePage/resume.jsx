@@ -20,14 +20,15 @@ const ResumePage = () => {
 
   const handleSideLoading = (link) => {
     setLoading(true)
-    setAlert(true)
     axios.get(link, )
     .then(() => {
       console.log('f')
       setLoading(false)
+      setAlert(true)
     }, () => {
       console.log('f')
       setLoading(false)
+      setAlert(true)
     });
   }
 
