@@ -7,6 +7,7 @@ import axios from 'axios'
 
 import ResumeComponent from '../../components/ResumeComponent/resume'
 import AlertComponent from '../../components/AlertComponent/alert'
+import SideLoadingCommponent from '../../components/SideLoadingCommponent/loading'
 
 import { english } from '../../data'
 import { persian } from '../../data'
