@@ -173,19 +173,9 @@
 }
 
 .ProjectpartOne {
-  position: relative;
   display: flex;
   justify-content: space-between;
   gap: 5%;
-}
-
-.sideLoadContainer {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
 }
 
 .Projectcontainer[language='persian'] .ProjectpartOne {
@@ -193,7 +183,20 @@
 }
 
 .ProjectpartOneImg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+}
+
+.sideLoadContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  width: max-content;
 }
 
 .ProjectpartOne img{

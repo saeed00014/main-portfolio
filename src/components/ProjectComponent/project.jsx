@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom'
 
 import { persian } from '../../data'
 import { english } from '../../data'
-import ImgSliderComponent from '../ImgSlider/imgSlider'
 import { HashLink } from 'react-router-hash-link'
-import SideLoadingCommponent from '../SideLoadingCommponent/loading'
+
+import ImgSliderComponent from '../ImgSlider/imgSlider'
 
 const ProjectComponent = ({homeedition}) => {
   const [sideLoad, setSideLoad] = useState(true)
@@ -97,13 +97,8 @@ const ProjectComponent = ({homeedition}) => {
                           <h1>{details.name}</h1>
                           <p>{details.dis}</p>
                         </div>
-                        <div onClick={() => handleImg(details.link)} className='ProjectpartOneImg'>
-                          {sideLoad && 
-                          <div className="sideLoadContainer">
-                            <SideLoadingCommponent />
-                          </div>
-                          }
-                          <img src={details.link} alt="" />
+                        <div className='ProjectpartOneImg'>
+                          <img onClick={() => handleImg(details.link)} src={details.link} alt="" />
                         </div>
                       </div>
                     </div>
