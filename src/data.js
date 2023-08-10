@@ -225,7 +225,7 @@ export const english = [
     {
       title: 'Resume.',
       dis: 'download Resume',
-      link: "https://cvbuilder.me/Builder/Pdf/en/template34/60bfaf67-8eda-43bc-b668-185e77348195/MyResume-207[www.cvbuilder.me]881.pdf"
+      link: "https://cvbuilder.me/Builder/Pdf/en/template34/60bfaf67-8eda-43bc-b668-185e77348195/MyResume-719[www.cvbuilder.me]566.pdf"
     }
   ],
   [
