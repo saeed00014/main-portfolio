@@ -20,7 +20,13 @@ const AboutComponent = () => {
               <h1>{li.title}</h1>
               <p>{li.dis}</p>
               <p>{li.dis1}</p>
-              <Link to='/project'>
+              <Link to='/project'
+                onClick={() => {
+                  window.scroll({
+                    top: 0,
+                  });
+                }}
+              >
                 <span></span>
                 <span></span>
                 {li.button}

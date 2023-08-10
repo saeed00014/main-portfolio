@@ -54,7 +54,14 @@ const HomeHeaderComponent = () => {
                   <p>{li.disBottom}</p>
                 </div>
               </div>
-              <Link to='/contact' className='HomeHeadercontactLink'>
+              <Link to='/contact' 
+                onClick={() => {
+                  window.scroll({
+                    top: 0,
+                  });
+                }}
+                 className='HomeHeadercontactLink'
+              >
                 {li.contact}
                 <span></span>  
                 <span></span>  
