@@ -57,10 +57,6 @@
   transition: all .4s ease;
 }
 
-.HomeHeaderh1C:hover  {
-  overflow: visible;
-}
-
 .HomeHeadersection[language='persian'] .h1Title h1:hover {
   transform: scale(1.03);
   color: var(--global-color-ReallyLight);

@@ -191,6 +191,12 @@ export const persian = [
       ContactTitle: 'ارتباط با من',
       ContactDis: 'پیام خود را ارسال کنید از طریق ایمیل پاسخ میدهم'
     }
+  ],
+  [
+    {
+      text:'صفحه ای که به دنبال آن هستید یافت نشد',
+      link: 'بازگشت به صفحه اصلی'
+    }
   ]
 ]
 
@@ -367,6 +373,12 @@ export const english = [
       ProjectsDis: 'take a look at some of my my projects',
       ContactTitle: 'Contact Me',
       ContactDis: 'Send me a message ill answer you via email'
+    }
+  ],
+  [
+    {
+      text:'the page you are looking for is not found',
+      link: 'go back to home'
     }
   ]
 ]
