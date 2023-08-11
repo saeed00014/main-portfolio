@@ -66,7 +66,7 @@ const ProjectComponent = ({homeedition}) => {
                       )
                     })}
                     {homeedition &&
-                      <HashLink className='ProjectvisitSite' to={li.HashLinks} target="_blank" >
+                      <HashLink className='ProjectvisitSite' to={li.HashLinks}>
                         <span></span>
                         {li.button}
                       </HashLink>
