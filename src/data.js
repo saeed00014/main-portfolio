@@ -157,7 +157,7 @@ export const persian = [
         },
         {
           name: 'گیت هاب',
-          link: 'https://comfy-fenglisu-3f8324.netlify.app/',
+          link: 'https://github.com/saeed00014/site-netlify',
         }
       ],
       HashLinks: '/project/#2',
@@ -340,7 +340,7 @@ export const english = [
         },
         {
           name: 'GitHub',
-          link: 'https://comfy-fenglisu-3f8324.netlify.app/',
+          link: 'https://github.com/saeed00014/site-netlify',
         }
       ],
       HashLinks: '/project/#2',
