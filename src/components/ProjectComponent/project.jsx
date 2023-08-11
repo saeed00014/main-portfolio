@@ -59,14 +59,14 @@ const ProjectComponent = ({homeedition}) => {
                   <div className="ProjectprojectLink">
                     {li.links.map((liLink) => {
                       return (
-                        <a key={liLink.name} className="ProjectvisitSite" href={liLink.link}>
+                        <a key={liLink.name} className="ProjectvisitSite" href={liLink.link} target="_blank" >
                           {liLink.name}
                           <span></span>
                         </a>
                       )
                     })}
                     {homeedition &&
-                      <HashLink className='ProjectvisitSite' to={li.HashLinks}>
+                      <HashLink className='ProjectvisitSite' to={li.HashLinks} target="_blank" >
                         <span></span>
                         {li.button}
                       </HashLink>

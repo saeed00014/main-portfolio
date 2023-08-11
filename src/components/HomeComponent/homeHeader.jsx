@@ -68,17 +68,17 @@ const HomeHeaderComponent = () => {
               </Link>
               <ul className='HomeHeadersocialLink'>
                 <li>
-                  <a href='https://github.com/saeed00014'>
+                  <a href='https://github.com/saeed00014' target="_blank">
                     <AiFillGithub />
                   </a>
                 </li>
                 <li>
-                  <a href='https://github.com/saeed00014'>
+                  <a href='https://github.com/saeed00014' target="_blank">
                     <AiFillLinkedin />
                   </a>
                 </li>
                 <li>
-                  <a href='https://github.com/saeed00014'>
+                  <a href='https://github.com/saeed00014'target="_blank">
                     <AiFillInstagram />
                   </a>
                 </li>
