@@ -26,22 +26,22 @@ const Footer = () => {
           <div className='FooterfooterLink'>
             <ul className='FootersocialLink'>
               <li>
-                <a href="saeedm00014@gmail.com">
+              <a href="mailto:saeedm00014@gmail.com">
                   <AiOutlineMail />
                 </a>
               </li>
               <li>
-                <a href='https://github.com/saeed00014'>
+                <a href='https://github.com/saeed00014' target="_blank">
                   <AiFillGithub />
                 </a>
               </li>
               <li>
-                <a href='https://github.com/saeed00014'>
+                <a href='https://github.com/saeed00014' target="_blank">
                   <AiFillLinkedin />
                 </a>
               </li>
               <li>
-                <a href='https://github.com/saeed00014'>
+                <a href='https://github.com/saeed00014' target="_blank">
                   <AiFillInstagram />
                 </a>
               </li>
