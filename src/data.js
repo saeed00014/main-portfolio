@@ -151,14 +151,7 @@ export const persian = [
         'RestApi'
       ],
       links: [
-        {
-          name: 'مشاهده سایت',
-          link: 'https://comfy-fenglisu-3f8324.netlify.app/',
-        },
-        {
-          name: 'گیت هاب',
-          link: 'https://github.com/saeed00014/site-netlify',
-        }
+
       ],
       HashLinks: '/project/#2',
       button: 'مشاهده توضیحات',
@@ -334,14 +327,7 @@ export const english = [
         'RestApi'
       ],
       links: [
-        {
-          name: 'VisitSite',
-          link: 'https://comfy-fenglisu-3f8324.netlify.app/',
-        },
-        {
-          name: 'GitHub',
-          link: 'https://github.com/saeed00014/site-netlify',
-        }
+
       ],
       HashLinks: '/project/#2',
       button: 'Perview',

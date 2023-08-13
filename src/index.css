@@ -19,6 +19,13 @@
   --global-color-hover: #73d622;
   --global-color-ReallyLight: rgb(104, 206, 206);
   --global-color-background: rgba(29, 29, 29, 0.445);
+  --backup-text: rgb(0, 110, 255);
+  --alike-color: rgb(0, 50, 138);
+  --golden-color: #e2c000;
+  --color-primary:rgb(34, 34, 34);
+  --main-text: rgb(255, 255, 255);
+  --icon-back: rgb(15, 15, 15);
+  --background-color: black;
 }
 
 *,
