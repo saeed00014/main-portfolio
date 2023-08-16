@@ -5,7 +5,7 @@ const cors = require('cors')
 
 app.use(cors())
 
-app.use("/", express.static(path.join(__dirname, "./dist")));
+app.use("/portfolio", express.static(path.join(__dirname, "./dist")));
 app.get("/api/v1", (req, res) => {
   res.json({
     project: "React and Express Boilerplate",
