@@ -1,4 +1,4 @@
-.scard {
+.shoppingcard {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +6,13 @@
   width: 100vw;
 }
 
-.scard-container {
+.shoppingcard * {
+  color: black;
+  font-family: Roboto;
+  font-weight: 100;
+}
+
+.shoppingcard-container {
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -15,7 +21,7 @@
   margin-top: 1rem;
 }
 
-.scard__content-container {
+.shoppingcard__content-container {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -26,7 +32,7 @@
   max-width: 1170px;
 }
 
-.scard-content {
+.shoppingcard-content {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -34,7 +40,7 @@
   background-color: var(--main-text);
 }
 
-.scard-top {
+.shoppingcard-top {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -43,11 +49,11 @@
   font-size: 1.5rem;
 }
 
-.scard-top h1 {
+.shoppingcard-top h1 {
   font-weight: 100;
 }
 
-.scard-top div {
+.shoppingcard-top div {
   display: flex;
   align-items: end;
   justify-content: end;
@@ -55,7 +61,7 @@
   font-size: 1.3rem;
 }
 
-.scard-body {
+.shoppingcard-body {
   display: flex;
   flex-direction: row;
   align-items: start;
@@ -64,7 +70,7 @@
   padding: 15px;
 }
 
-.scard-details {
+.shoppingcard-details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -72,7 +78,7 @@
   gap: .8rem;
 }
 
-.scard-details * {
+.shoppingcard-details * {
   font-weight: 100;
 }
 
@@ -109,12 +115,10 @@
   cursor: pointer;
 }
 
-.middle-details2 div {
-  position: relative;
+.quantity {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(71, 71, 71);
+  background-color: rgb(199, 199, 199);
+  border-radius: 10px;
 }
 
 .h4-det {
@@ -124,9 +128,6 @@
   align-items: center;
   width: 70px;
   height: 35px;
-  background-color: rgb(199, 199, 199);
-  color: rgb(0, 0, 0);
-  border-radius: 10px;
   font-size: 1rem;
 }
 
@@ -136,9 +137,6 @@
   align-items: center;
   width: 70px;
   height: 35px;
-  background-color: rgb(199, 199, 199);
-  color: rgb(0, 0, 0);
-  border-radius: 10px;
   font-size: 1rem;
 }
 
@@ -149,20 +147,19 @@
   height: 35px;
   font-size: 1.2rem;
   z-index: 2;
-  color: var(--main-text);
   background-color: transparent;
+  border: none;
 }
 
-.qty-btn2 {
+.quantity-btn2 {
   justify-content: end;
 }
 
-.scard-details div h2 {
+.shoppingcard-details div h2 {
   color: var(--background-color);
 }
 
-.qty-btn1:hover ~ h4,
-.qty-btn2:hover ~ h4 {
+.quantity:hover {
   background-color: rgb(160, 160, 160);
 }
 
@@ -170,14 +167,14 @@
   color: red;
 }
 
-.scard-img img {
+.shoppingcard-img img {
   width: 125px;
   height: 125px;
   object-fit: cover;
   border-radius: 10px;
 } 
 
-.scard-bottom {
+.shoppingcard-bottom {
   display: flex;
   justify-content: end;
   align-items: center;
@@ -188,11 +185,11 @@
   font-size: 1.2rem;
 }
 
-.scard-bottom h3 {
+.shoppingcard-bottom h3 {
   font-weight: 100;
 }
 
-.right-scard {
+.right-shoppingcard {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -203,7 +200,7 @@
   gap: 1rem;
 }
 
-.right-scard h3 {
+.right-shoppingcard h3 {
   color: var(--main-text);
 }
 
@@ -224,6 +221,7 @@
   font-size: 1rem;
   transition: all .3s;
   z-index: 4;
+  border: none;
 }
 
 .pricehandler-content button:hover {
@@ -271,6 +269,7 @@
   background-color: var(--backup-text);
   color: var(--main-text);
   transition: all .3s ease-in-out;
+  border: none;
 }
 
 .suggestions-text button:hover {
@@ -350,21 +349,21 @@
   justify-content: space-evenly;
 }
 
-@media screen and (min-width:650px) and (max-width:1000px) {
+@media shoppingcreen and (min-width:650px) and (max-width:1000px) {
   .proceed-pay {
-    transform: scale(.95);
+    transform: shoppingcale(.95);
   }
 }
 
-@media screen and (max-width:650px) {
-  .scard-container {
+@media shoppingcreen and (max-width:650px) {
+  .shoppingcard-container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 95%;
   }
   
-  .scard__content-container {
+  .shoppingcard__content-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -373,46 +372,46 @@
     max-width: 450px;
   }
 
-  .scard-top {
+  .shoppingcard-top {
     height: 50px;
     padding: 5px 15px;
   }
 
-  .scard-top div {
+  .shoppingcard-top div {
     height: 40px;
   }
 
-  .scard-top h1 {
+  .shoppingcard-top h1 {
     font-size: 2rem;
   }
 
   
-  .scard-content {
+  .shoppingcard-content {
     width: 100%;
   }
   
-  .scard-body {
+  .shoppingcard-body {
     gap: 1rem;
   }
   
-  .scard-img {
+  .shoppingcard-img {
     width: 35%;
   }
   
-  .scard-img img {
+  .shoppingcard-img img {
     width: 100%;
   }
 
-  .scard-details {
+  .shoppingcard-details {
     width: 80%;
   }
   
-  .scard-bottom {
+  .shoppingcard-bottom {
     height: 40px;
     padding: 10px;
   }
 
-  .right-scard {
+  .right-shoppingcard {
     width: 100%;
     margin-top: 1rem;
     max-width: 342px;

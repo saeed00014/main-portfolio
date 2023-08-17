@@ -34,7 +34,7 @@ const CardComponent = () => {
   }, [])
 
   const handleDelete = async (product) => {
-    await fetch('https://bodybuild-api.cyclic.cloud/card' + product._id, {
+    await fetch('https://bodybuild-api.cyclic.cloud/card/' + product._id, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -49,22 +49,19 @@ const CardComponent = () => {
   }
   
   const handleAdd = async (product) => {
-    console.log('post')
-    if(product.quantity < 5) {
-      await fetch('https://bodybuild-api.cyclic.cloud/card', {
-        method: 'POST',
-        body: JSON.stringify(product),
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-          "Access-Control-Allow-Origin" : "*", 
-          "Access-Control-Allow-Credentials" : true,
-          "Access-Control-Expose-Headers": "*",
-          "Access-Control-Allow-Methods": "*" 
-        }
-      })
-      dispatch(addCard(product))
-    }
+    dispatch(addCard(product))
+    await fetch('https://bodybuild-api.cyclic.cloud/card', {
+      method: 'POST',
+      body: JSON.stringify(product),
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        "Access-Control-Allow-Origin" : "*", 
+        "Access-Control-Allow-Credentials" : true,
+        "Access-Control-Expose-Headers": "*",
+        "Access-Control-Allow-Methods": "*" 
+      }
+    })
   }
   
   const handleDecrease = async (product) => {
@@ -72,6 +69,7 @@ const CardComponent = () => {
     if(value > 1) {
       value = value - 1 
     }
+    dispatch(decreaseCard(product))
     await fetch('https://bodybuild-api.cyclic.cloud/card/' + product._id, {
       method: 'PATCH',
       body: JSON.stringify({"quantity" : value}),
@@ -84,7 +82,6 @@ const CardComponent = () => {
         "Access-Control-Allow-Methods": "*" 
       }
     })
-    dispatch(decreaseCard(product))
   }
   
   const handleIncrease = async (product) => {
@@ -92,6 +89,7 @@ const CardComponent = () => {
     if(value < 5) {
       value = value + 1 
     }
+    dispatch(increaseCard(product))
     await fetch('https://bodybuild-api.cyclic.cloud/card/' + product._id, {
       method: 'PATCH',
       body: JSON.stringify({"quantity" : value}),
@@ -104,7 +102,6 @@ const CardComponent = () => {
         "Access-Control-Allow-Methods": "*" 
       }
     })
-    dispatch(increaseCard(product))
   }
 
   const handlePrice = (price) => {
@@ -121,22 +118,22 @@ const CardComponent = () => {
   }
 
   return (
-      <section id='header' className='scard'>
-        <div className="scard-container">
-          <div className="scard__content-container">
+      <section id='header' className='shoppingcard'>
+        <div className="shoppingcard-container">
+          <div className="shoppingcard__content-container">
             {card.cardItems &&
               card.cardItems.map((product) => {
               return (
-                <div key={product.id} className="scard-content">
-                    <div className='scard-top'>
+                <div key={product.id} className="shoppingcard-content">
+                    <div className='shoppingcard-top'>
                       <h1>Shopping Cart</h1>
                       <div><small>price</small></div>
                     </div>
-                    <div className="scard-body">
-                      <div className="scard-img">
+                    <div className="shoppingcard-body">
+                      <div className="shoppingcard-img">
                         <img src={product.image} alt="" />
                       </div>
-                      <div className="scard-details">
+                      <div className="shoppingcard-details">
                         <div className='top-details'>
                           <h3>{product.title}</h3>
                           <h3>{product.price}$</h3>
@@ -147,12 +144,12 @@ const CardComponent = () => {
                           <h4>{product.color && `color: ${product.color}`}</h4>
                         </div>
                         <div className='middle-details2'>
-                          <div className='qty'>
+                          <div className='quantity'>
                             {
                               product.size &&
                               <>
-                                <button onClick={() => handleDecrease(product)} className='qty-btn1'><BiChevronLeft/></button>
-                                <button onClick={() => handleIncrease(product)} className='qty-btn2'><BiChevronRight/></button> 
+                                <button onClick={() => handleDecrease(product)} className='quantity-btn1'><BiChevronLeft/></button>
+                                <button onClick={() => handleIncrease(product)} className='quantity-btn2'><BiChevronRight/></button> 
                               </>
                             }
                             <h4 className='h4-det'>Qty: {product.quantity}</h4>
@@ -162,7 +159,7 @@ const CardComponent = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="scard-bottom">
+                    <div className="shoppingcard-bottom">
                     <h3>Subtotal ({product.quantity} item{product.quantity > 1 && 's'})
                       : {handlePrice(product.quantity * product.price)}$</h3>
                     </div>
@@ -170,7 +167,7 @@ const CardComponent = () => {
               )
             })}
           </div>
-          <div className="right-scard">
+          <div className="right-shoppingcard">
             <div className="pricehandler-content"> 
               <div className="pricehandler-top">
                 <h3>Subtotal ({card.cardTotalQuantity} item{card.cardTotalQuantity > 1 && 's'}): {card.cardTotalPrice}$</h3>
