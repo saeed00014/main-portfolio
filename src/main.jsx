@@ -7,10 +7,12 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import App from './App'
 import UiSlice from './store/UiSlice'
+import cardSlice from './store/cardSlice';
 
 const store = configureStore({
   reducer: {
-    ui: UiSlice.reducer
+    ui: UiSlice.reducer,
+    card : cardSlice.reducer
   }  
 })
 

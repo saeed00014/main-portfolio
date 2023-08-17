@@ -12,6 +12,7 @@ import ResumePage from './pages/ResumePage/resume'
 import NotFoundPage from './pages/NotFoundPage/notfound'
 import Header from './components/Header/header'
 import Footer from './components/Footer/footer'
+import SkillsPage from './pages/SkillsPage/skills'
 
 function App() {
   const ui = useSelector((state) => state.ui)
@@ -37,6 +38,7 @@ function App() {
               <Route path='/project' element={<ProjectPage />} />
               <Route path='/contact' element={<ContactPage />} />
               <Route path='/resume' element={<ResumePage />} />
+              <Route path='/skills' element={<SkillsPage />} />
               <Route path='/*' element={<NotFoundPage />} />
             </Routes>
             <Footer />

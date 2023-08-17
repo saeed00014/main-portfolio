@@ -15,7 +15,7 @@ app.get("/api/v1", (req, res) => {
 app.get("/*", (_req, res) => {
   res.sendFile(path.join(__dirname, "./dist", "index.html"));
 })
-const { PORT = 5000 } = process.env;
+const PORT = 4000
 app.listen(PORT, () => {
   console.log();
   console.log(`  App running in port ${PORT}`);
