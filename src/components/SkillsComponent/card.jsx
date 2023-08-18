@@ -13,7 +13,6 @@ const CardComponent = () => {
   const [pay, setPay] = useState(false)
   const card = useSelector((state) => state.card)
   const dispatch = useDispatch()
-  console.log(card)
 
   useEffect(() => {
     const handleget = async () => {
@@ -52,7 +51,8 @@ const CardComponent = () => {
   
   const handleAdd = async (product) => {
     if(card.cardItems.find((item) => item._id == product._id )) {
-      if(card.cardItems.map((item) => item._id == product._id && item.quantity < 5 )) {
+      const item = card.cardItems.find((item) => item._id == product._id)
+      if(item.quantity < 5) {
         dispatch(addCard(product))
         await fetch('https://bodybuild-api.cyclic.cloud/card', {
           method: 'POST',
@@ -85,6 +85,7 @@ const CardComponent = () => {
   }
   
   const handleDecrease = async (product) => {
+    console.log( product.quantity)
     let value = product.quantity
     if(value > 1) {
       value = value - 1 
@@ -144,7 +145,7 @@ const CardComponent = () => {
             {card.cardItems &&
               card.cardItems.map((product) => {
               return (
-                <div key={product.id} className="shoppingcard-content">
+                <div key={product._id} className="shoppingcard-content">
                     <div className='shoppingcard-top'>
                       <h1>Shopping Cart</h1>
                       <div><small>price</small></div>
@@ -197,7 +198,7 @@ const CardComponent = () => {
             <h3>Check our Suggested Products</h3>
             {shop.map((product) => {
               return (         
-              <div key={product.id} className="suggestions">          
+              <div key={product._id} className="suggestions">          
                 <img src={product.image} alt="" />            
                 <div className="suggestions-text">           
                   <h3>{product.title}</h3>           
