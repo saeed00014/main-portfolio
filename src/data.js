@@ -30,6 +30,11 @@ export const persian = [
       link: '/project',
       names: 'پروژه ها',
       name: 'پروژه ها'
+    },
+    {
+      link: '/skills',
+      names: 'مهارت ها',
+      name: 'مهارت ها'
     }
   ],
   [
@@ -201,14 +206,19 @@ export const english = [
       name: '01.Projects'
     },
     {
+      link: '/skills',
+      names: 'skills',
+      name: '02.skills'
+    },
+    {
       link: "/resume",
       names: 'Resume',
-      name: '02.Resume'
+      name: '03.Resume'
     },
     {
       link: "/contact",
       names: 'Contact',
-      name: '03.Contact'
+      name: '04.Contact'
     }
   ],
   [

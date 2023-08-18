@@ -42,9 +42,9 @@
 
 .HeadernavlinkContainer {
   display: flex;
-  width: 60%;
+  width: 70%;
   height: 3rem;
-  max-width: 25rem;
+  max-width: 30rem;
   list-style: none;
 }
 

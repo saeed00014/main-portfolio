@@ -1,0 +1,48 @@
+.skillssection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding-top: 2rem;
+}
+
+.skillssection * {
+  font-family: Roboto;
+  font-weight: 100;
+}
+
+.skillscontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skillscontainerh1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 3rem; 
+}
+
+.skillscontainer p {
+  display: flex;
+  font-size: 1.3rem;
+}
+
+.skillscontainer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.skillscontainer a:hover {
+  color: var(--global-color-primary);
+}

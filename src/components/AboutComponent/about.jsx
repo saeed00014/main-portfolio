@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import { persian } from '../../data'
 import { english } from '../../data'
 
-const AboutComponent = () => {
+const AboutComponent = ({skillsedition}) => {
   const ui = useSelector((state) => state.ui)
   return (
     <div language={ui.language} className='AboutContainer'>
@@ -16,6 +16,7 @@ const AboutComponent = () => {
       .map((li) => {
         return (
           <div key={li.title} className='Aboutcontent'>
+            {!skillsedition &&
             <div className='AboutaboutLeft'>
               <h1>{li.title}</h1>
               <p>{li.dis}</p>
@@ -32,6 +33,7 @@ const AboutComponent = () => {
                 {li.button}
               </Link>
             </div>
+            }
             <div className='AboutaboutRight'>
               <h1>{li.titleSkill}</h1>
               <div className='Aboutskills'>

@@ -47,6 +47,7 @@ const CardComponent = () => {
     })
     dispatch(deleteCard(product))
   }
+
   
   const handleAdd = async (product) => {
     dispatch(addCard(product))
@@ -188,37 +189,6 @@ const CardComponent = () => {
               </div>
               )
             })}
-          </div>
-        </div>
-        <div className={pay ? "proceed__pay-container" : "no-pay"}>
-          <div className="proceed-pay">
-            <div className="pay-top">
-                <h1>You are Buying</h1>
-                <button onClick={() => setPay(false)}>x</button>
-            </div>
-            <div className="pay__product-container">
-                {card.cardItems && 
-                  card.cardItems.map((product) => {
-                    return (
-                      <div className='pay-product'>
-                        <img src={product.image} alt="" />
-                      </div>
-                    )
-                })}
-            </div>
-            <h3>Subtotal: {card.cardTotalQuantity} item{card.cardTotalQuantity > 1 && 's'}: {card.cardTotalPrice}$</h3>
-            <h3>Choose your Payment Method</h3>
-            <div className='pay-method'>
-              <div>
-                <img src="" alt="" /> 
-              </div>
-              <div>
-                <img src="" alt="" />
-              </div>
-              <div>
-                <img src="" alt="" />
-              </div>
-            </div>
           </div>
         </div>
       </section>

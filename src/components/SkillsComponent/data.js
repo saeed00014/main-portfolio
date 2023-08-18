@@ -1,7 +1,7 @@
 
-import shop1 from '../../images/shop1.jpg'
-import shop2 from '../../images/shop2.jpg'
-import shop3 from '../../images/shop3.jpg'
+import shop1 from './images/shop1.jpg'
+import shop2 from './images/shop2.jpg'
+import shop3 from './images/shop3.jpg'
 
 export const shop = [
     {
