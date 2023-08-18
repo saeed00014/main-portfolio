@@ -13,6 +13,7 @@ const CardComponent = () => {
   const [pay, setPay] = useState(false)
   const card = useSelector((state) => state.card)
   const dispatch = useDispatch()
+  console.log(card)
 
   useEffect(() => {
     const handleget = async () => {
@@ -50,19 +51,37 @@ const CardComponent = () => {
 
   
   const handleAdd = async (product) => {
-    dispatch(addCard(product))
-    await fetch('https://bodybuild-api.cyclic.cloud/card', {
-      method: 'POST',
-      body: JSON.stringify(product),
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        "Access-Control-Allow-Origin" : "*", 
-        "Access-Control-Allow-Credentials" : true,
-        "Access-Control-Expose-Headers": "*",
-        "Access-Control-Allow-Methods": "*" 
+    if(card.cardItems.find((item) => item._id == product._id )) {
+      if(card.cardItems.map((item) => item._id == product._id && item.quantity < 5 )) {
+        dispatch(addCard(product))
+        await fetch('https://bodybuild-api.cyclic.cloud/card', {
+          method: 'POST',
+          body: JSON.stringify(product),
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            "Access-Control-Allow-Origin" : "*", 
+            "Access-Control-Allow-Credentials" : true,
+            "Access-Control-Expose-Headers": "*",
+            "Access-Control-Allow-Methods": "*" 
+          }
+        })
       }
-    })
+    }else {
+      dispatch(addCard(product))
+      await fetch('https://bodybuild-api.cyclic.cloud/card', {
+        method: 'POST',
+        body: JSON.stringify(product),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          "Access-Control-Allow-Origin" : "*", 
+          "Access-Control-Allow-Credentials" : true,
+          "Access-Control-Expose-Headers": "*",
+          "Access-Control-Allow-Methods": "*" 
+        }
+      })
+    }
   }
   
   const handleDecrease = async (product) => {
