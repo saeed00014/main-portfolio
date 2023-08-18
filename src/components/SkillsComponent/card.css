@@ -357,13 +357,13 @@
   justify-content: space-evenly;
 }
 
-@media shoppingcreen and (min-width:650px) and (max-width:1000px) {
+@media screen and (min-width:650px) and (max-width:1000px) {
   .proceed-pay {
     transform: shoppingcale(.95);
   }
 }
 
-@media shoppingcreen and (max-width:650px) {
+@media screen and (max-width:650px) {
   .shoppingcard-container {
     flex-direction: column;
     justify-content: center;
