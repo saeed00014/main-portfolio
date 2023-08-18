@@ -80,7 +80,7 @@ const cardSlice  = createSlice ({
         state.cardItems.filter((item) => item._id !== newItem._id)
     },
     getTotals(state, action) {
-      let {total, quantity} = state.cardItems.reduce((cardTotal, cardItem) => {
+      let {total, quantity} = state.cardItems && state.cardItems.reduce((cardTotal, cardItem) => {
         const { price, quantity } = cardItem
         const itemTotal = price * quantity
 
@@ -96,10 +96,15 @@ const cardSlice  = createSlice ({
       total = parseFloat(total.toFixed(2))
       state.cardTotalQuantity = quantity
       state.cardTotalPrice = total
+    },
+    wipeCards(state, action) {
+      state.cardItems = []
+      state.cardTotalQuantity = 0
+      state.cardTotalPrice = 0
     }
 }})
 
-export const { getallCard, addCard, decreaseCard, increaseCard, deleteCard, getTotals } =
+export const { getallCard, addCard, decreaseCard, increaseCard, deleteCard, getTotals, wipeCards } =
   cardSlice.actions;
 
 export default cardSlice

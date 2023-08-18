@@ -2,7 +2,7 @@ import './card.css'
 
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { addCard, decreaseCard, deleteCard, getTotals, getallCard, increaseCard } from '../../store/cardSlice';
+import { addCard, decreaseCard, deleteCard, getTotals, getallCard, increaseCard, wipeCards } from '../../store/cardSlice';
 
 import { BiChevronLeft } from 'react-icons/bi'
 import { BiChevronRight } from 'react-icons/bi'
@@ -32,6 +32,24 @@ const CardComponent = () => {
     }
     handleget()
   }, [])
+  
+  const handlerefresh = async () => {
+    console.log('refreshing')
+    dispatch(wipeCards())
+    const res = await fetch('https://bodybuild-api.cyclic.cloud/card', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        "Access-Control-Allow-Origin" : "*", 
+        "Access-Control-Allow-Credentials" : true,
+        "Access-Control-Expose-Headers": "*",
+        "Access-Control-Allow-Methods": "*" 
+      }
+    })
+    const response = await res.json()
+    dispatch(getallCard(response))
+  }
 
   const handleDelete = async (product) => {
     await fetch('https://bodybuild-api.cyclic.cloud/card/' + product._id, {
@@ -187,13 +205,20 @@ const CardComponent = () => {
                 </div>
               )
             })}
+            
           </div>
           <div className="right-shoppingcard">
             <div className="pricehandler-content"> 
               <div className="pricehandler-top">
-                <h3>Subtotal ({card.cardTotalQuantity} item{card.cardTotalQuantity > 1 && 's'}): {card.cardTotalPrice}$</h3>
+                <h3>
+                  <button onClick={handlerefresh}>
+                    refresh
+                  </button>
+                  Subtotal ({card.cardTotalQuantity} item{card.cardTotalQuantity > 1 && 's'})
+                    : {card.cardTotalPrice}$
+                </h3>
               </div>
-              <button>proceed to checkout({card.cardTotalQuantity} item{card.cardTotalQuantity > 1 && 's'})</button>       
+              <button className='pay-proceed'>proceed to checkout({card.cardTotalQuantity} item{card.cardTotalQuantity > 1 && 's'})</button>       
             </div>
             <h3>Check our Suggested Products</h3>
             {shop.map((product) => {

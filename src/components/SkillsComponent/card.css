@@ -1,5 +1,6 @@
 .shoppingcard {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 550px;
@@ -212,7 +213,7 @@
   width: 100%;
 }
 
-.pricehandler-content button {
+.pay-proceed {
   width: 100%;
   height: 45px;
   background-color: var(--backup-text);
