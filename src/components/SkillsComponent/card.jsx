@@ -52,7 +52,7 @@ const CardComponent = () => {
   const handleAdd = async (product) => {
     if(card.cardItems.find((item) => item._id == product._id )) {
       const item = card.cardItems.find((item) => item._id == product._id)
-      if(item.quantity < 5) {
+      if(item.quantity <= 5) {
         dispatch(addCard(product))
         await fetch('https://bodybuild-api.cyclic.cloud/card', {
           method: 'POST',
