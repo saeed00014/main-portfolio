@@ -101,9 +101,9 @@ export const persian = [
       id: '1',
       Link1: artonomy2,
       Link2: artonomy1,
-      title: 'Artonomy(current project)',
+      title: '(پروژه فعلی) Artonomy',
       dis:
-      'This is my current project Its an Art website and its not complete yet but you can visit some complete parts of it',
+      'این پروژه فعلی منه یه سایت هنریه که هنوز کامل نیست و میتونید تعدادی از بخش های کامل شده رو مشاهده کنید',
       skills: [
         'ReactJs',
         'ReduxToolkit',
@@ -113,9 +113,9 @@ export const persian = [
         
       ],
       HashLinks: '/project/#1',
-      button: 'Perview',
-      titlePerview: 'Artonomy.Perview ',
-      viddetails: 'Here is a responsive disiegn of the Website explore page and header',
+      button: 'مشاهده توضیحات',
+      titlePerview: 'Artonomy توضیحات ',
+      viddetails: 'این یک نمونه ریسپانسیو از صفحه اکسپلور و هدر سایت هست',
       video: artonomy,
       details: [
 
@@ -129,7 +129,7 @@ export const persian = [
       Link3: Ajorplusdata,
       Link5: Ajorplususer,
       Link5: Ajorplusqomer,
-      title: 'آجر پلاس',
+      title: 'AjorPlus',
       dis:
       'این یک پروژه خوصوصیه که تازه تمومش کردم یک کارخونه آجره که تعدادی کوره داره و هر کوره که قابلیت تغییر اطلاعات اضافه و حذف اطلاعات اضافه کردن کاربر با سطح دسترسی لاگین و... رو داره',
       skills: [
@@ -175,7 +175,7 @@ export const persian = [
       Link3: imgLink3,
       Link4: imgLink4,
       Link5: imgLink5,
-      title: '(BodyBuild) بدنسازی',
+      title: 'BodyBuild',
       dis: 'این اولین کار من بوده که خیلی وقت پیش درستش کردم کاملا ریسپانسیوه و فروشگاه و بخش ساین این و ساین اوت داره',
       skills: [
         'ReactJs',

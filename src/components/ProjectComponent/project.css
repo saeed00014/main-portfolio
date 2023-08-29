@@ -164,11 +164,21 @@
   width: max-content;
 }
 
+.vidcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .viddetails {
   display: flex;
   margin-top: -1rem;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   font-size: 1.2rem
+}
+
+.Projectcontainer[language='persian'] .viddetails {
+  justify-content: end;
 }
 
 .ProjectprojectPerview {
