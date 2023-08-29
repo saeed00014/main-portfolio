@@ -49,7 +49,6 @@
   height: 300px;
   width: 100%;
   object-fit: cover;
-  border: 2px solid var(--global-color-primary);
 }
 
 .Projectphone {
@@ -61,7 +60,6 @@
   bottom: -1rem;
   width: 7rem;
   z-index: 4;
-  border: 2px solid var(--global-color-primary);
 }
 
 .Projectdetails {
@@ -164,6 +162,13 @@
   font-size: 2rem;
   gap: 1rem;
   width: max-content;
+}
+
+.viddetails {
+  display: flex;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  font-size: 1.2rem
 }
 
 .ProjectprojectPerview {

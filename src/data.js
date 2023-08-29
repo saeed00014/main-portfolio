@@ -4,6 +4,10 @@ import imgLink3 from './images/bodySign.png'
 import imgLink4 from './images/bodyForm.png'
 import imgLink5 from './images/bodyCard.png'
 
+import artonomy1 from './images/artonomy1.png'
+import artonomy2 from './images/artonomy2.png'
+import artonomy from './videos/Artonomy.mp4'
+
 import Ajorplusphone from './images/Ajorplusphone.png'
 import Ajorplushdash from './images/Ajorplushdash.png'
 import Ajorplusdata from './images/Ajorplusdata.png'
@@ -95,6 +99,30 @@ export const persian = [
   [
     {
       id: '1',
+      Link1: artonomy2,
+      Link2: artonomy1,
+      title: 'Artonomy(current project)',
+      dis:
+      'This is my current project Its an Art website and its not complete yet but you can visit some complete parts of it',
+      skills: [
+        'ReactJs',
+        'ReduxToolkit',
+        'Figma'
+      ],
+      links: [
+        
+      ],
+      HashLinks: '/project/#1',
+      button: 'Perview',
+      titlePerview: 'Artonomy.Perview ',
+      viddetails: 'Here is a responsive disiegn of the Website explore page and header',
+      video: artonomy,
+      details: [
+
+      ]
+    },
+    {
+      id: '2',
       Link1: Ajorplushdash,
       Link2: Ajorplusphone,
       Link4: Ajorpluslogin,
@@ -113,7 +141,7 @@ export const persian = [
       links: [
         
       ],
-      HashLinks: '/project/#1',
+      HashLinks: '/project/#2',
       button: 'مشاهده توضیحات',
       titlePerview: 'AjorPlus توضیحات',
       video: AjorPlus,
@@ -141,7 +169,7 @@ export const persian = [
       ]
     },
     {
-      id: '2',
+      id: '3',
       Link1: imgLink1,
       Link2: imgLink2,
       Link3: imgLink3,
@@ -158,7 +186,7 @@ export const persian = [
       links: [
 
       ],
-      HashLinks: '/project/#2',
+      HashLinks: '/project/#3',
       button: 'مشاهده توضیحات',
       titlePerview: 'BodyBuild توضیحات',
       details: [
@@ -275,6 +303,30 @@ export const english = [
   [
     {
       id: '1',
+      Link1: artonomy2,
+      Link2: artonomy1,
+      title: 'Artonomy(current project)',
+      dis:
+      'This is my current project Its an Art website and its not complete yet but you can visit some complete parts of it',
+      skills: [
+        'ReactJs',
+        'ReduxToolkit',
+        'Figma'
+      ],
+      links: [
+        
+      ],
+      HashLinks: '/project/#1',
+      button: 'Perview',
+      titlePerview: 'Artonomy.Perview ',
+      viddetails: 'Here is a responsive disiegn of the Website explore page and header',
+      video: artonomy,
+      details: [
+
+      ]
+    },
+    {
+      id: '2',
       Link1: Ajorplushdash,
       Link2: Ajorplusphone,
       Link4: Ajorpluslogin,
@@ -293,7 +345,7 @@ export const english = [
       links: [
         
       ],
-      HashLinks: '/project/#1',
+      HashLinks: '/project/#2',
       button: 'Perview',
       titlePerview: 'AjorPlus.Perview ',
       video: AjorPlus,
@@ -321,7 +373,7 @@ export const english = [
       ]
     },
     {
-      id: '2',
+      id: '3',
       Link1: imgLink1,
       Link2: imgLink2,
       Link3: imgLink3,
@@ -339,7 +391,7 @@ export const english = [
       links: [
 
       ],
-      HashLinks: '/project/#2',
+      HashLinks: '/project/#3',
       button: 'Perview',
       titlePerview: 'BodyBuild.Perview',
       details: [
