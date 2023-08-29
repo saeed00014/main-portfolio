@@ -319,7 +319,7 @@ export const english = [
       HashLinks: '/project/#1',
       button: 'Perview',
       titlePerview: 'Artonomy.Perview ',
-      viddetails: 'Here is a responsive disiegn of the Website explore page and header',
+      viddetails: 'Here is a responsive design of the Website explore page and header',
       video: artonomy,
       details: [
 
