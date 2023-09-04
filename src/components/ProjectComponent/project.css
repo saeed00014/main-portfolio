@@ -23,6 +23,8 @@
   width: 80%;
   max-width: 70rem;
   gap: 3rem;
+  border-top: 2px solid var(--global-color-primary);
+  padding-top: 3rem;
 }
 
 .ProjectprojectItself {

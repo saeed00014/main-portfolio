@@ -33,6 +33,7 @@
 .skillscontainer p {
   display: flex;
   font-size: 1.3rem;
+  text-align: center;
 }
 
 .skillscontainer a {
@@ -41,8 +42,25 @@
   align-items: center;
   font-size: 1.3rem;
   text-decoration: none;
+  text-align: center;
 }
 
 .skillscontainer a:hover {
   color: var(--global-color-primary);
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 640px) {
+
+}
+
+@media only screen and (max-width: 640px) and (min-width: 480px) {
+  .skillscontainer p {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 0) { 
+  .skillscontainer p {
+    flex-direction: column;
+  }
 }
